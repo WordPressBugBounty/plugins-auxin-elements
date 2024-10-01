@@ -7,7 +7,7 @@ Tags: phlox, elementor, auxin, averta, fullwidth
 Requires PHP: 5.4
 Requires at least: 5.0
 Tested up to: 6.6.2
-Stable tag: 2.16.2
+Stable tag: 2.16.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
