@@ -42,7 +42,7 @@ class Auxin_Widget_Shortcode_Map {
 
 
     public function __construct(){
-        add_action('auxin_loaded', array( $this, 'auxin_framework_loaded' ) );
+        add_action('init', array( $this, 'auxin_framework_loaded' ) );
     }
 
 
