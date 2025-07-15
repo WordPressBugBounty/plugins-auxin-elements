@@ -108,6 +108,11 @@ class Auxin_Widget_Shortcode_Map {
      */
     private function add_shortcodes() {
 
+        if ( defined('WP_CLI') && WP_CLI ) {
+            return; 
+        }
+
+
         $shortcode_array_list = $this->get_master_shortcode_array();
 
         foreach ( $shortcode_array_list as $shortcode_index => $shortcode_array ) {
