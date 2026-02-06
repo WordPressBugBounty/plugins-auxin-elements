@@ -7,7 +7,7 @@
  * @license    LICENSE.txt
  * @author     averta
  * @link       http://phlox.pro/
- * @copyright  (c) 2010-2025 averta
+ * @copyright  (c) 2010-2026 averta
 */
 
 // no direct access allowed
@@ -81,7 +81,8 @@ class Auxels_Search_Post_Type {
             's'                 => $this->s,
             'post_type'         => $this->post_type,
             'no_found_rows'     => 1,
-            'posts_per_page'    => $this->per_page
+            'posts_per_page'    => $this->per_page,
+            'post_status'       => 'publish'
         );
 
         // Get category slug for each post type

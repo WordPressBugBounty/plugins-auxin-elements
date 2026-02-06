@@ -25,6 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class ModernHeading extends Widget_Base {
 
+    public $allowed_tags = [
+        'h1'   => 'H1',
+        'h2'   => 'H2',
+        'h3'   => 'H3',
+        'h4'   => 'H4',
+        'h5'   => 'H5',
+        'h6'   => 'H6',
+        'div'  => 'div',
+        'span' => 'span',
+        'p'    => 'p'
+    ];
+
     /**
      * Get widget name.
      *
@@ -53,6 +65,9 @@ class ModernHeading extends Widget_Base {
         return __('Modern Heading', 'auxin-elements' );
     }
 
+    public function has_widget_inner_wrapper(): bool {
+        return ! \Elementor\Plugin::$instance->experiments->is_feature_active( 'e_optimized_markup' ); 
+    }
 
 
     /**
@@ -136,17 +151,7 @@ class ModernHeading extends Widget_Base {
             array(
                 'label'   => __( 'HTML Tag', 'auxin-elements' ),
                 'type'    => Controls_Manager::SELECT,
-                'options' => array(
-					'h1'   => 'H1',
-					'h2'   => 'H2',
-					'h3'   => 'H3',
-					'h4'   => 'H4',
-					'h5'   => 'H5',
-					'h6'   => 'H6',
-					'div'  => 'div',
-					'span' => 'span',
-					'p'    => 'p'
-                ),
+                'options' => $this->allowed_tags,
                 'default'   => 'h2',
             )
         );
@@ -286,17 +291,7 @@ class ModernHeading extends Widget_Base {
             array(
                 'label'   => __( 'HTML Tag', 'auxin-elements' ),
                 'type'    => Controls_Manager::SELECT,
-                'options' => array(
-					'h1'   => 'H1',
-					'h2'   => 'H2',
-					'h3'   => 'H3',
-					'h4'   => 'H4',
-					'h5'   => 'H5',
-					'h6'   => 'H6',
-					'div'  => 'div',
-					'span' => 'span',
-					'p'    => 'p'
-                ),
+                'options' => $this->allowed_tags,
                 'default'   => 'h3'
             )
         );
@@ -1160,6 +1155,10 @@ class ModernHeading extends Widget_Base {
     protected function render() {
 
         $settings = $this->get_settings_for_display();
+
+        $settings['title_tag'] = in_array( $settings['title_tag'], array_keys( $this->allowed_tags ) ) ? $settings['title_tag'] : 'h2';
+
+        $settings['title_tag_secondary'] = in_array( $settings['title_tag_secondary'], array_keys( $this->allowed_tags ) ) ? $settings['title_tag_secondary'] : 'h3';
 
         $divider_markup  = auxin_is_true( $settings['divider'] ) ? '<div class="aux-modern-heading-divider"></div>' : '';
 
