@@ -630,6 +630,11 @@ class Auxin_Welcome extends Auxin_Welcome_Base {
 		if ( ! check_ajax_referer( 'aux_setup_nonce', 'wpnonce' ) || ! isset( $_POST['slug'] ) || empty( $_POST['slug'] ) ) {
 			wp_send_json_error( array( 'message' => esc_html__( 'No Slug Found', 'auxin-elements' ) ) );
 		}
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( array( 'message' => esc_html__( 'Permission Error', 'auxin-elements' ) ) );
+        }
+
         $request = array();
         // send back some json we use to hit up TGM
         $plugins = $this->get_plugins();
@@ -1216,6 +1221,10 @@ class Auxin_Welcome extends Auxin_Welcome_Base {
             }
         }
 
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( esc_html__( 'Permission Error.', 'auxin-elements' ) );
+        }
+
         // Checking the Active Demo ID with requested one
         $last_demo  = get_option( 'auxin_last_imported_demo' );
         $request_id = empty( $request_id ) && isset( $_POST['id'] ) ? sanitize_text_field( $_POST['id'] ) : $request_id;
@@ -1487,6 +1496,10 @@ class Auxin_Welcome extends Auxin_Welcome_Base {
 		$next_step = empty( $next_step ) ? sanitize_text_field( $_POST['next_step'] ) : $next_step;
 		$nonce     = sanitize_text_field( $_POST['nonce'] );
 		$args      = auxin_sanitize_input( $_POST['args'] );
+
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( esc_html__( 'Permission Error.', 'auxin-elements' ) );
+        }
 
 		$steps     = array(
         	'1' => array(

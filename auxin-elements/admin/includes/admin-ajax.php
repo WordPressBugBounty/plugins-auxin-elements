@@ -250,7 +250,7 @@ add_action( 'wp_ajax_noprive_filter_get_content', 'auxin_ajax_filter_get_content
  */
 function auxin_dismissed_notice(){
     // Store it in the options table
-	if ( ! isset( $_POST['id'] ) ||  ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], '_notice_nonce' ) ) {
+	if ( ! isset( $_POST['id'] ) ||  ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], '_notice_nonce' ) || ! current_user_can('manage_options')  ) {
 		wp_send_json_error(  __( 'Token Error.', 'auxin-elements' ) );
 	} else {
 		auxin_set_transient( sanitize_text_field( 'auxin-notice-' . $_POST['id'] ), 1, sanitize_text_field( $_POST['expiration'] ) );
@@ -308,6 +308,13 @@ add_action( 'wp_ajax_auxin_display_actvation_form', 'auxin_display_actvation_for
  */
 function auxin_purchase_activation(){
 
+    if ( ! current_user_can( 'manage_options') ) {
+        wp_send_json_error( array(
+			'message' 	 => __( 'Persmission Error.', 'auxin-elements' ),
+			'buttonText' => __( 'Close', 'auxin-elements' ),
+		) );
+    }
+
     if ( ! isset( $_POST['usermail'] ) ||  ! isset( $_POST['purchase'] ) || ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'auxin-purchase-activation' ) ) {
 		wp_send_json_error( array(
 			'message' 	 => __( 'Token Error.', 'auxin-elements' ),
@@ -349,6 +356,14 @@ function auxin_ajax_upgrader(){
         ) );
     }
 
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_send_json_error(  array(
+            'slug'         => '',
+            'errorCode'    => 'permission_error',
+            'errorMessage' => __( 'Permission Error.', 'auxin-elements' )
+        ) );
+    }
+
     $handler = new Auxin_Upgrader_Ajax_Handlers;
     $handler->run( sanitize_text_field( $_POST['key'] ), sanitize_text_field( $_POST['type'] ) );
 }
@@ -364,6 +379,10 @@ function auxin_customizer_export(){
 
     if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'auxin-export-control' ) ) {
 		wp_send_json_error( __( 'Token Error.', 'auxin-elements' ) );
+    }
+
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_send_json_error( __('Permission Error.', 'auxin-elements' ) );
     }
 
     // Get theme options

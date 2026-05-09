@@ -1672,7 +1672,7 @@ class RecentPostsGridCarousel extends Widget_Base {
         $this->add_control(
             'hover_wrapper_transition_duration',
             array(
-                'label'     => __( 'Transition duration', 'auxin-elements' ),
+                'label'     => __( 'Transition duration (ms)', 'auxin-elements' ),
                 'type'      => Controls_Manager::SLIDER,
                 'range'     => array(
                     'px' => array(
@@ -1682,7 +1682,7 @@ class RecentPostsGridCarousel extends Widget_Base {
                     )
                 ),
                 'selectors' => array(
-                    '{{WRAPPER}} .aux-col:hover .column-entry' => 'transition-duration:{{SIZE}}ms;'
+                    '{{WRAPPER}} .aux-col .column-entry' => 'transition-duration:{{SIZE}}ms;'
                 )
             )
         );

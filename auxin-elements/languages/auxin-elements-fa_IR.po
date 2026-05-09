@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auxin Essential Elements\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-01-24 11:49:05+00:00\n"
+"POT-Creation-Date: 2026-05-09 07:40:30+00:00\n"
 "PO-Revision-Date: 2016-11-09 12:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,13 +26,13 @@ msgid "Data cannot be delivered, please try again."
 msgstr "داده ها قابل تحویل نیستند، لطفا دوباره تلاش کنید."
 
 #: admin/includes/admin-ajax.php:18 admin/includes/admin-ajax.php:83
-#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:483
+#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:502
 msgid "Authorization failed!"
 msgstr "احراز هویت با خطا مواجه شد!"
 
 #: admin/includes/admin-ajax.php:22 admin/includes/admin-ajax.php:87
-#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:411
-#: admin/includes/admin-ajax.php:489
+#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:430
+#: admin/includes/admin-ajax.php:508
 #: includes/classes/class-auxels-envato-elements.php:89
 #: includes/classes/class-auxin-demo-importer.php:210
 #: includes/classes/class-auxin-demo-importer.php:246
@@ -48,8 +48,8 @@ msgid "An error occurred. Feedback could not be delivered, please try again."
 msgstr "خطایی رخ داده است. بازخورد قابل تحویل نیست، لطفا دوباره تلاش کنید."
 
 #: admin/includes/admin-ajax.php:128 admin/includes/admin-ajax.php:254
-#: admin/includes/admin-ajax.php:313 admin/includes/admin-ajax.php:348
-#: admin/includes/admin-ajax.php:366 admin/includes/admin-ajax.php:407
+#: admin/includes/admin-ajax.php:320 admin/includes/admin-ajax.php:355
+#: admin/includes/admin-ajax.php:381 admin/includes/admin-ajax.php:426
 msgid "Token Error."
 msgstr ""
 
@@ -66,9 +66,9 @@ msgid "It's OK."
 msgstr ""
 
 #: admin/includes/admin-ajax.php:270
-#: includes/classes/class-auxin-welcome.php:1210
 #: includes/classes/class-auxin-welcome.php:1215
-#: includes/classes/class-auxin-welcome.php:1379
+#: includes/classes/class-auxin-welcome.php:1220
+#: includes/classes/class-auxin-welcome.php:1388
 msgid "Security Token Error!"
 msgstr ""
 
@@ -95,39 +95,49 @@ msgstr ""
 msgid "Activate"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:314 admin/includes/admin-ajax.php:329
+#: admin/includes/admin-ajax.php:313
+msgid "Persmission Error."
+msgstr ""
+
+#: admin/includes/admin-ajax.php:314 admin/includes/admin-ajax.php:332
+#: includes/classes/class-auxin-demo-importer.php:115
+#: includes/classes/class-auxin-demo-importer.php:158
+#: includes/classes/class-auxin-demo-importer.php:193
+#: includes/classes/class-auxin-welcome.php:1367
+#: includes/classes/class-auxin-welcome.php:1402
+#: includes/classes/class-auxin-welcome.php:1834
+msgid "Close"
+msgstr ""
+
+#: admin/includes/admin-ajax.php:321 admin/includes/admin-ajax.php:336
 #: includes/classes/class-auxin-demo-importer.php:191
 msgid "Retry"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:325
-#: includes/classes/class-auxin-demo-importer.php:115
-#: includes/classes/class-auxin-demo-importer.php:158
-#: includes/classes/class-auxin-demo-importer.php:193
-#: includes/classes/class-auxin-welcome.php:1358
-#: includes/classes/class-auxin-welcome.php:1393
-#: includes/classes/class-auxin-welcome.php:1821
-msgid "Close"
+#: admin/includes/admin-ajax.php:363 admin/includes/admin-ajax.php:385
+#: includes/classes/class-auxin-welcome.php:1225
+#: includes/classes/class-auxin-welcome.php:1501
+msgid "Permission Error."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:382
+#: admin/includes/admin-ajax.php:401
 msgid "No data found!"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:416
+#: admin/includes/admin-ajax.php:435
 #, fuzzy
 msgid "Please upload a valid file."
 msgstr "لطفا فایل ویدیو را بارگذاری کنید."
 
-#: admin/includes/admin-ajax.php:431
+#: admin/includes/admin-ajax.php:450
 msgid "Invalid or Empty Data."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:468
+#: admin/includes/admin-ajax.php:487
 msgid "Successfully Imported."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:496
+#: admin/includes/admin-ajax.php:515
 msgid "Invalid template ID."
 msgstr ""
 
@@ -395,9 +405,9 @@ msgid "You need to enter a unique id for notice."
 msgstr ""
 
 #: admin/includes/classes/class-auxin-notices.php:186
-#: includes/classes/class-auxin-welcome.php:1873
-#: includes/classes/class-auxin-welcome.php:1896
-#: includes/classes/class-auxin-welcome.php:1936
+#: includes/classes/class-auxin-welcome.php:1886
+#: includes/classes/class-auxin-welcome.php:1909
+#: includes/classes/class-auxin-welcome.php:1949
 msgid "Skip"
 msgstr ""
 
@@ -1406,6 +1416,12 @@ msgid "Default"
 msgstr "پیش فرض"
 
 #: admin/includes/metaboxes/metabox-fields-general-header.php:842
+#: includes/compatibility/wpforms/wpforms.php:206
+#: includes/compatibility/wpforms/wpforms.php:504
+#: includes/compatibility/wpforms/wpforms.php:724
+#: includes/compatibility/wpforms/wpforms.php:968
+#: includes/compatibility/wpforms/wpforms.php:1212
+#: includes/compatibility/wpforms/wpforms.php:1572
 #: includes/elementor/widgets/accordion.php:267
 #: includes/elementor/widgets/accordion.php:455
 #: includes/elementor/widgets/accordion.php:569
@@ -1810,22 +1826,22 @@ msgid "Processing: Download"
 msgstr ""
 
 #: includes/classes/class-auxels-admin-assets.php:67
-#: includes/classes/class-auxin-welcome.php:1434
-#: includes/classes/class-auxin-welcome.php:1561
-#: includes/classes/class-auxin-welcome.php:1959
+#: includes/classes/class-auxin-welcome.php:1443
+#: includes/classes/class-auxin-welcome.php:1574
+#: includes/classes/class-auxin-welcome.php:1972
 #, fuzzy
 msgid "Continue"
 msgstr "دربرگیرنده"
 
 #: includes/classes/class-auxels-admin-assets.php:68
 #: includes/classes/class-auxin-welcome.php:527
-#: includes/classes/class-auxin-welcome.php:1641
+#: includes/classes/class-auxin-welcome.php:1654
 #, fuzzy
 msgid "Install Plugins"
 msgstr "افزونه های فعال"
 
 #: includes/classes/class-auxels-admin-assets.php:69
-#: includes/classes/class-auxin-welcome.php:1787
+#: includes/classes/class-auxin-welcome.php:1800
 #, fuzzy
 msgid "Import Content"
 msgstr "محتوای جعبه ای"
@@ -1945,7 +1961,7 @@ msgstr ""
 
 #: includes/classes/class-auxin-demo-importer.php:147
 #: includes/classes/class-auxin-demo-importer.php:166
-#: includes/classes/class-auxin-welcome.php:814
+#: includes/classes/class-auxin-welcome.php:819
 msgid "Copy to clipboard"
 msgstr ""
 
@@ -2265,12 +2281,12 @@ msgid "Remove"
 msgstr ""
 
 #: includes/classes/class-auxin-walker-nav-menu-back.php:381
-#: includes/classes/class-auxin-welcome.php:1437
-#: includes/classes/class-auxin-welcome.php:1465
-#: includes/classes/class-auxin-welcome.php:1564
-#: includes/classes/class-auxin-welcome.php:1643
-#: includes/classes/class-auxin-welcome.php:1691
-#: includes/classes/class-auxin-welcome.php:1789
+#: includes/classes/class-auxin-welcome.php:1446
+#: includes/classes/class-auxin-welcome.php:1474
+#: includes/classes/class-auxin-welcome.php:1577
+#: includes/classes/class-auxin-welcome.php:1656
+#: includes/classes/class-auxin-welcome.php:1704
+#: includes/classes/class-auxin-welcome.php:1802
 msgid "Cancel"
 msgstr ""
 
@@ -2434,7 +2450,7 @@ msgid ""
 msgstr ""
 
 #: includes/classes/class-auxin-welcome.php:413
-#: includes/classes/class-auxin-welcome.php:737
+#: includes/classes/class-auxin-welcome.php:742
 #: includes/elements/popular-posts-widget.php:390
 msgid "Recent"
 msgstr "اخیر"
@@ -2473,349 +2489,353 @@ msgstr ""
 msgid "No Slug Found"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:650
+#: includes/classes/class-auxin-welcome.php:635
+msgid "Permission Error"
+msgstr ""
+
+#: includes/classes/class-auxin-welcome.php:655
 #, fuzzy
 msgid "Activating"
 msgstr "بخش فعال"
 
-#: includes/classes/class-auxin-welcome.php:665
+#: includes/classes/class-auxin-welcome.php:670
 msgid "Updating"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:680
+#: includes/classes/class-auxin-welcome.php:685
 msgid "Installing"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:691
+#: includes/classes/class-auxin-welcome.php:696
 msgid "Activated"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:750
-#: includes/classes/class-auxin-welcome.php:942
+#: includes/classes/class-auxin-welcome.php:755
+#: includes/classes/class-auxin-welcome.php:947
 msgid "Search Templates"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:757
+#: includes/classes/class-auxin-welcome.php:762
 #, fuzzy
 msgid ""
 "An error occurred while downloading the list of templates. Please try again "
 "later."
 msgstr "خطایی رخ داده است. بازخورد قابل تحویل نیست، لطفا دوباره تلاش کنید."
 
-#: includes/classes/class-auxin-welcome.php:801
+#: includes/classes/class-auxin-welcome.php:806
 msgid "Download"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:822
-#: includes/classes/class-auxin-welcome.php:1002
+#: includes/classes/class-auxin-welcome.php:827
+#: includes/classes/class-auxin-welcome.php:1007
 msgid "Unlock"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:834
-#: includes/classes/class-auxin-welcome.php:1013
-#: includes/classes/class-auxin-welcome.php:1355
-#: includes/classes/class-auxin-welcome.php:1818
+#: includes/classes/class-auxin-welcome.php:839
+#: includes/classes/class-auxin-welcome.php:1018
+#: includes/classes/class-auxin-welcome.php:1364
+#: includes/classes/class-auxin-welcome.php:1831
 msgid "Preview"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:857
+#: includes/classes/class-auxin-welcome.php:862
 msgid "Save to my templates"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:868
+#: includes/classes/class-auxin-welcome.php:873
 #, fuzzy
 msgid "Create new page"
 msgstr "صفحه جاری"
 
-#: includes/classes/class-auxin-welcome.php:925
+#: includes/classes/class-auxin-welcome.php:930
 msgid "All Templates"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:948
+#: includes/classes/class-auxin-welcome.php:953
 #, fuzzy
 msgid ""
 "An error occurred while downloading the list of demo sites. Please try again "
 "later."
 msgstr "خطایی رخ داده است. بازخورد قابل تحویل نیست، لطفا دوباره تلاش کنید."
 
-#: includes/classes/class-auxin-welcome.php:997
-#: includes/classes/class-auxin-welcome.php:1462
+#: includes/classes/class-auxin-welcome.php:1002
+#: includes/classes/class-auxin-welcome.php:1471
 msgid "Uninstall"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:997
-#: includes/classes/class-auxin-welcome.php:1366
+#: includes/classes/class-auxin-welcome.php:1002
+#: includes/classes/class-auxin-welcome.php:1375
 msgid "Import"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1100
+#: includes/classes/class-auxin-welcome.php:1105
 msgid "You have already the latest version."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1104
+#: includes/classes/class-auxin-welcome.php:1109
 msgid "New updates are available."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1105
+#: includes/classes/class-auxin-welcome.php:1110
 msgid ""
 "The following items require update, click update button to update them to "
 "the latest version."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1114
+#: includes/classes/class-auxin-welcome.php:1119
 msgid "Last checked "
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1116
+#: includes/classes/class-auxin-welcome.php:1121
 msgid "ago"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1136
-#: includes/classes/class-auxin-welcome.php:1166
-#: includes/classes/class-auxin-welcome.php:1617
+#: includes/classes/class-auxin-welcome.php:1141
+#: includes/classes/class-auxin-welcome.php:1171
+#: includes/classes/class-auxin-welcome.php:1630
 msgid "Ready to update"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1186
+#: includes/classes/class-auxin-welcome.php:1191
 msgid "Update Now"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1189
+#: includes/classes/class-auxin-welcome.php:1194
 msgid "Check Again"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1223
+#: includes/classes/class-auxin-welcome.php:1232
 msgid "You can't remove this demo."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1349
+#: includes/classes/class-auxin-welcome.php:1358
 msgid "Done!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1350
+#: includes/classes/class-auxin-welcome.php:1359
 msgid "Demo has been successfully uninstalled."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1412
+#: includes/classes/class-auxin-welcome.php:1421
 #: public/includes/frontend-ajax.php:186 public/includes/frontend-ajax.php:251
 msgid "An Error Occurred!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1426
+#: includes/classes/class-auxin-welcome.php:1435
 #, fuzzy
 msgid "Notice"
 msgstr "نکته"
 
-#: includes/classes/class-auxin-welcome.php:1428
+#: includes/classes/class-auxin-welcome.php:1437
 msgid ""
 "For better and faster result, it's recommended to install the demo on a "
 "clean WordPress website."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1454
+#: includes/classes/class-auxin-welcome.php:1463
 msgid "Warning!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1456
+#: includes/classes/class-auxin-welcome.php:1465
 msgid "This process will erase all images, posts and settings of this demo..."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1461
+#: includes/classes/class-auxin-welcome.php:1470
 msgid "Are you sure you want to uninstall this demo?"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1471
-#: includes/classes/class-auxin-welcome.php:1697
-#: includes/classes/class-auxin-welcome.php:1795
+#: includes/classes/class-auxin-welcome.php:1480
+#: includes/classes/class-auxin-welcome.php:1710
+#: includes/classes/class-auxin-welcome.php:1808
 msgid "Please wait, this may take several minutes .."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1537
+#: includes/classes/class-auxin-welcome.php:1550
 msgid "An error occurred!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1539
+#: includes/classes/class-auxin-welcome.php:1552
 msgid "Method not exist!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1553
-#: includes/classes/class-auxin-welcome.php:1594
+#: includes/classes/class-auxin-welcome.php:1566
+#: includes/classes/class-auxin-welcome.php:1607
 msgid "Required Plugins for this demo."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1555
+#: includes/classes/class-auxin-welcome.php:1568
 msgid ""
 "For better and faster install process it's recommended to install demo on a "
 "clean WordPress website."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1595
+#: includes/classes/class-auxin-welcome.php:1608
 msgid "The following plugins are required to be installed for this demo."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1609
+#: includes/classes/class-auxin-welcome.php:1622
 #, fuzzy
 msgid "Ready to install"
 msgstr "تکرار افقی"
 
-#: includes/classes/class-auxin-welcome.php:1613
+#: includes/classes/class-auxin-welcome.php:1626
 #, fuzzy
 msgid "Not activated"
 msgstr "اصلا"
 
-#: includes/classes/class-auxin-welcome.php:1674
+#: includes/classes/class-auxin-welcome.php:1687
 msgid "You already have installed template!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1676
+#: includes/classes/class-auxin-welcome.php:1689
 msgid ""
 "For better and faster install proccess it's recommanded to install demo on a "
 "clean wordpress website."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1688
+#: includes/classes/class-auxin-welcome.php:1701
 msgid "Unistall Template"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1714
+#: includes/classes/class-auxin-welcome.php:1727
 msgid "Import Demo Content of Phlox Theme."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1719
+#: includes/classes/class-auxin-welcome.php:1732
 msgid "Complete pre-build Website"
-msgstr ""
-
-#: includes/classes/class-auxin-welcome.php:1724
-#, fuzzy
-msgid "Import media (images, videos, etc.)"
-msgstr "نمایش رسانه های نوشته (تصویر، ویدیو، غیره)"
-
-#: includes/classes/class-auxin-welcome.php:1731
-msgid "Selected Data Only"
 msgstr ""
 
 #: includes/classes/class-auxin-welcome.php:1737
 #, fuzzy
+msgid "Import media (images, videos, etc.)"
+msgstr "نمایش رسانه های نوشته (تصویر، ویدیو، غیره)"
+
+#: includes/classes/class-auxin-welcome.php:1744
+msgid "Selected Data Only"
+msgstr ""
+
+#: includes/classes/class-auxin-welcome.php:1750
+#, fuzzy
 msgid "Posts/Pages"
 msgstr "نوشته ها"
 
-#: includes/classes/class-auxin-welcome.php:1742
+#: includes/classes/class-auxin-welcome.php:1755
 #, fuzzy
 msgid "Media"
 msgstr "متوسط"
 
-#: includes/classes/class-auxin-welcome.php:1747
+#: includes/classes/class-auxin-welcome.php:1760
 #, fuzzy
 msgid "Widgets"
 msgstr "عنوان ابزارک"
 
-#: includes/classes/class-auxin-welcome.php:1754
+#: includes/classes/class-auxin-welcome.php:1767
 msgid "Menus"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1759
+#: includes/classes/class-auxin-welcome.php:1772
 #, fuzzy
 msgid "Theme Options"
 msgstr "تنظیمات طراحی"
 
-#: includes/classes/class-auxin-welcome.php:1764
+#: includes/classes/class-auxin-welcome.php:1777
 msgid "MasterSlider (If Available)"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1774
+#: includes/classes/class-auxin-welcome.php:1787
 msgid "Importing Demo Content is in Progress..."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1775
+#: includes/classes/class-auxin-welcome.php:1788
 msgid ""
 "This process may take 5 to 10 minutes to complete, please do not close or "
 "refresh this page."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1809
+#: includes/classes/class-auxin-welcome.php:1822
 msgid "Congratulations!"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1810
+#: includes/classes/class-auxin-welcome.php:1823
 msgid "Demo has been successfully imported."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1815
+#: includes/classes/class-auxin-welcome.php:1828
 #, fuzzy
 msgid "Customize"
 msgstr "تصویر دلخواه"
 
-#: includes/classes/class-auxin-welcome.php:1832
+#: includes/classes/class-auxin-welcome.php:1845
 #, fuzzy
 msgid "Importing page content ..."
 msgstr "تراز تصویر در محتوا."
 
-#: includes/classes/class-auxin-welcome.php:1856
+#: includes/classes/class-auxin-welcome.php:1869
 msgid "Remove Watermarks?"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1857
+#: includes/classes/class-auxin-welcome.php:1870
 msgid ""
 "Some images in this demo are copyrighted and watermarked, you can remove "
 "watermarks by authorizing your Envato Elements subscription."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1871
+#: includes/classes/class-auxin-welcome.php:1884
 msgid "Remove Watermarks"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1886
+#: includes/classes/class-auxin-welcome.php:1899
 msgid "Remove watermarks by authorizing your Envato Elements subscription"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1887
+#: includes/classes/class-auxin-welcome.php:1900
 msgid ""
 "By subscribing to Envato Elements you will have access to unlimited premium "
 "stock images, icons, graphical assets, videos and more."
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1889
+#: includes/classes/class-auxin-welcome.php:1902
 msgid "Explore and Subscribe"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1891
+#: includes/classes/class-auxin-welcome.php:1904
 msgid "Already an Envato Elements member?"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1891
+#: includes/classes/class-auxin-welcome.php:1904
 msgid "Activate here"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1909
+#: includes/classes/class-auxin-welcome.php:1922
 msgid "Verify Your Envato Elements Subscription"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1910
+#: includes/classes/class-auxin-welcome.php:1923
 msgid "Enter your token below to verify your Subscription"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1912
+#: includes/classes/class-auxin-welcome.php:1925
 #, fuzzy
 msgid "Enter token here"
 msgstr "برچسب دکمه را وارد کنید."
 
-#: includes/classes/class-auxin-welcome.php:1919
+#: includes/classes/class-auxin-welcome.php:1932
 msgid "How to generate a token ?"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1920
+#: includes/classes/class-auxin-welcome.php:1933
 msgid "Don't have subscription?"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1930
+#: includes/classes/class-auxin-welcome.php:1943
 msgid "Verify Token"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1949
+#: includes/classes/class-auxin-welcome.php:1962
 msgid "Succeed"
 msgstr ""
 
-#: includes/classes/class-auxin-welcome.php:1950
+#: includes/classes/class-auxin-welcome.php:1963
 msgid ""
 "Congratulations! you have successfully authorized your Envato Elements "
 "subscription."
@@ -2884,6 +2904,638 @@ msgstr "افزودن بخش"
 #, fuzzy
 msgid "Select Audio"
 msgstr "انتخاب شکاف آکاردئون"
+
+#: includes/compatibility/wpforms/wpforms.php:17
+#: includes/elementor/widgets/contact-form.php:166
+msgid "All Inputs"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:26
+#: includes/compatibility/wpforms/wpforms.php:312
+#: includes/compatibility/wpforms/wpforms.php:788
+#: includes/compatibility/wpforms/wpforms.php:1033
+#: includes/compatibility/wpforms/wpforms.php:1318
+#: includes/compatibility/wpforms/wpforms.php:1355
+#: includes/compatibility/wpforms/wpforms.php:1392
+#: includes/elementor/widgets/contact-form.php:175
+#: includes/elementor/widgets/contact-form.php:462
+#: includes/elementor/widgets/contact-form.php:938
+#: includes/elementor/widgets/contact-form.php:1183
+#: includes/elementor/widgets/contact-form.php:1468
+#: includes/elementor/widgets/contact-form.php:1505
+#: includes/elementor/widgets/contact-form.php:1542
+#: includes/elementor/widgets/mailchimp.php:192
+#: includes/elementor/widgets/mailchimp.php:421
+#: includes/elementor/widgets/mailchimp.php:454
+msgid "Typography"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:37
+#: includes/compatibility/wpforms/wpforms.php:323
+#: includes/compatibility/wpforms/wpforms.php:348
+#: includes/compatibility/wpforms/wpforms.php:568
+#: includes/compatibility/wpforms/wpforms.php:799
+#: includes/compatibility/wpforms/wpforms.php:1044
+#: includes/compatibility/wpforms/wpforms.php:1329
+#: includes/compatibility/wpforms/wpforms.php:1366
+#: includes/compatibility/wpforms/wpforms.php:1403
+#: includes/compatibility/wpforms/wpforms.php:1580
+#: includes/elementor/widgets/accordion.php:556
+#: includes/elementor/widgets/accordion.php:576
+#: includes/elementor/widgets/accordion.php:596
+#: includes/elementor/widgets/accordion.php:633
+#: includes/elementor/widgets/button.php:474
+#: includes/elementor/widgets/button.php:494
+#: includes/elementor/widgets/button.php:544
+#: includes/elementor/widgets/button.php:584
+#: includes/elementor/widgets/carousel-navigation.php:314
+#: includes/elementor/widgets/circle-chart.php:288
+#: includes/elementor/widgets/circle-chart.php:319
+#: includes/elementor/widgets/circle-chart.php:350
+#: includes/elementor/widgets/contact-box.php:376
+#: includes/elementor/widgets/contact-form.php:186
+#: includes/elementor/widgets/contact-form.php:473
+#: includes/elementor/widgets/contact-form.php:498
+#: includes/elementor/widgets/contact-form.php:718
+#: includes/elementor/widgets/contact-form.php:949
+#: includes/elementor/widgets/contact-form.php:1194
+#: includes/elementor/widgets/contact-form.php:1479
+#: includes/elementor/widgets/contact-form.php:1516
+#: includes/elementor/widgets/contact-form.php:1553
+#: includes/elementor/widgets/custom-list.php:181
+#: includes/elementor/widgets/custom-list.php:237
+#: includes/elementor/widgets/custom-list.php:646
+#: includes/elementor/widgets/custom-list.php:742
+#: includes/elementor/widgets/custom-list.php:783
+#: includes/elementor/widgets/custom-list.php:841
+#: includes/elementor/widgets/custom-list.php:909
+#: includes/elementor/widgets/custom-list.php:939
+#: includes/elementor/widgets/divider.php:381
+#: includes/elementor/widgets/heading-modern.php:376
+#: includes/elementor/widgets/heading-modern.php:414
+#: includes/elementor/widgets/heading-modern.php:563
+#: includes/elementor/widgets/heading-modern.php:601
+#: includes/elementor/widgets/heading-modern.php:736
+#: includes/elementor/widgets/heading-modern.php:774
+#: includes/elementor/widgets/heading-modern.php:942
+#: includes/elementor/widgets/heading-modern.php:985
+#: includes/elementor/widgets/mailchimp.php:203
+#: includes/elementor/widgets/mailchimp.php:432
+#: includes/elementor/widgets/mailchimp.php:589
+#: includes/elementor/widgets/mailchimp.php:627
+#: includes/elementor/widgets/modern-button.php:512
+#: includes/elementor/widgets/modern-button.php:553
+#: includes/elementor/widgets/modern-button.php:616
+#: includes/elementor/widgets/modern-button.php:657
+#: includes/elementor/widgets/modern-button.php:732
+#: includes/elementor/widgets/modern-button.php:773
+#: includes/elementor/widgets/modern-button.php:874
+#: includes/elementor/widgets/modern-button.php:973
+#: includes/elementor/widgets/products-grid.php:405
+#: includes/elementor/widgets/products-grid.php:425
+#: includes/elementor/widgets/products-grid.php:474
+#: includes/elementor/widgets/products-grid.php:494
+#: includes/elementor/widgets/products-grid.php:545
+#: includes/elementor/widgets/products-grid.php:565
+#: includes/elementor/widgets/products-grid.php:614
+#: includes/elementor/widgets/products-grid.php:634
+#: includes/elementor/widgets/products-grid.php:683
+#: includes/elementor/widgets/products-grid.php:703
+#: includes/elementor/widgets/products-grid.php:822
+#: includes/elementor/widgets/products-grid.php:842
+#: includes/elementor/widgets/products-grid.php:915
+#: includes/elementor/widgets/products-grid.php:935
+#: includes/elementor/widgets/products-grid.php:1025
+#: includes/elementor/widgets/products-grid.php:1083
+#: includes/elementor/widgets/recent-comments.php:193
+#: includes/elementor/widgets/recent-comments.php:213
+#: includes/elementor/widgets/recent-comments.php:278
+#: includes/elementor/widgets/recent-comments.php:298
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1087
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1113
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1193
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1219
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1307
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1498
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1518
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1891
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1949
+#: includes/elementor/widgets/recent-posts-land-style.php:645
+#: includes/elementor/widgets/recent-posts-land-style.php:671
+#: includes/elementor/widgets/recent-posts-land-style.php:751
+#: includes/elementor/widgets/recent-posts-land-style.php:777
+#: includes/elementor/widgets/recent-posts-land-style.php:865
+#: includes/elementor/widgets/recent-posts-land-style.php:935
+#: includes/elementor/widgets/recent-posts-land-style.php:955
+#: includes/elementor/widgets/recent-posts-masonry.php:760
+#: includes/elementor/widgets/recent-posts-masonry.php:786
+#: includes/elementor/widgets/recent-posts-masonry.php:866
+#: includes/elementor/widgets/recent-posts-masonry.php:892
+#: includes/elementor/widgets/recent-posts-masonry.php:980
+#: includes/elementor/widgets/recent-posts-masonry.php:1050
+#: includes/elementor/widgets/recent-posts-masonry.php:1070
+#: includes/elementor/widgets/recent-posts-masonry.php:1287
+#: includes/elementor/widgets/recent-posts-masonry.php:1345
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:508
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:534
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:614
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:640
+#: includes/elementor/widgets/recent-posts-tiles.php:449
+#: includes/elementor/widgets/recent-posts-tiles.php:475
+#: includes/elementor/widgets/recent-posts-tiles.php:555
+#: includes/elementor/widgets/recent-posts-tiles.php:581
+#: includes/elementor/widgets/recent-posts-timeline.php:643
+#: includes/elementor/widgets/recent-posts-timeline.php:669
+#: includes/elementor/widgets/recent-posts-timeline.php:749
+#: includes/elementor/widgets/recent-posts-timeline.php:775
+#: includes/elementor/widgets/recent-posts-timeline.php:863
+#: includes/elementor/widgets/recent-posts-timeline.php:933
+#: includes/elementor/widgets/recent-posts-timeline.php:953
+#: includes/elementor/widgets/recent-products.php:545
+#: includes/elementor/widgets/recent-products.php:621
+#: includes/elementor/widgets/recent-products.php:647
+#: includes/elementor/widgets/responsive-table.php:186
+#: includes/elementor/widgets/responsive-table.php:255
+#: includes/elementor/widgets/responsive-table.php:285
+#: includes/elementor/widgets/responsive-table.php:315
+#: includes/elementor/widgets/staff.php:480
+#: includes/elementor/widgets/staff.php:506
+#: includes/elementor/widgets/staff.php:593
+#: includes/elementor/widgets/staff.php:657
+#: includes/elementor/widgets/staff.php:733
+#: includes/elementor/widgets/staff.php:759
+#: includes/elementor/widgets/tabs.php:395
+#: includes/elementor/widgets/tabs.php:415
+#: includes/elementor/widgets/tabs.php:454
+#: includes/elementor/widgets/testimonial.php:374
+#: includes/elementor/widgets/testimonial.php:414
+#: includes/elementor/widgets/testimonial.php:492
+#: includes/elementor/widgets/testimonial.php:532
+#: includes/elementor/widgets/testimonial.php:614
+#: includes/elementor/widgets/testimonial.php:654
+#: includes/elementor/widgets/text.php:712
+#: includes/elementor/widgets/text.php:732
+#: includes/elementor/widgets/text.php:819
+#: includes/elementor/widgets/text.php:839
+#: includes/elementor/widgets/text.php:932
+#: includes/elementor/widgets/text.php:952
+#: includes/elementor/widgets/text.php:1221
+#: includes/elementor/widgets/text.php:1241
+#: includes/elementor/widgets/text.php:1278
+#: includes/elementor/widgets/text.php:1318
+#: includes/elementor/widgets/theme-elements/copyright.php:187
+#: includes/elementor/widgets/theme-elements/copyright.php:226
+#: includes/elementor/widgets/theme-elements/current-time.php:177
+#: includes/elementor/widgets/theme-elements/logo.php:467
+#: includes/elementor/widgets/theme-elements/logo.php:561
+#: includes/elementor/widgets/theme-elements/menu.php:371
+#: includes/elementor/widgets/theme-elements/menu.php:450
+#: includes/elementor/widgets/theme-elements/menu.php:565
+#: includes/elementor/widgets/theme-elements/menu.php:814
+#: includes/elementor/widgets/theme-elements/menu.php:895
+#: includes/elementor/widgets/theme-elements/menu.php:1039
+#: includes/elementor/widgets/theme-elements/menu.php:1060
+#: includes/elementor/widgets/theme-elements/menu.php:1178
+#: includes/elementor/widgets/theme-elements/menu.php:1258
+#: includes/elementor/widgets/theme-elements/modern-search.php:258
+#: includes/elementor/widgets/theme-elements/modern-search.php:307
+#: includes/elementor/widgets/theme-elements/modern-search.php:369
+#: includes/elementor/widgets/theme-elements/modern-search.php:408
+#: includes/elementor/widgets/theme-elements/site-title.php:308
+#: includes/elementor/widgets/theme-elements/site-title.php:376
+#: includes/elementor/widgets/theme-elements/site-title.php:444
+#: includes/elementor/widgets/touch-slider.php:348
+#: includes/elementor/widgets/touch-slider.php:408
+#, fuzzy
+msgid "Color"
+msgstr "جعبه رنگ"
+
+#: includes/compatibility/wpforms/wpforms.php:48
+#: includes/compatibility/wpforms/wpforms.php:359
+#: includes/compatibility/wpforms/wpforms.php:579
+#: includes/compatibility/wpforms/wpforms.php:810
+#: includes/compatibility/wpforms/wpforms.php:1055
+#: includes/compatibility/wpforms/wpforms.php:1414
+#: includes/elementor/widgets/before-after.php:180
+#: includes/elementor/widgets/carousel-navigation.php:230
+#: includes/elementor/widgets/contact-form.php:197
+#: includes/elementor/widgets/contact-form.php:509
+#: includes/elementor/widgets/contact-form.php:729
+#: includes/elementor/widgets/contact-form.php:960
+#: includes/elementor/widgets/contact-form.php:1205
+#: includes/elementor/widgets/contact-form.php:1564
+#: includes/elementor/widgets/custom-list.php:428
+#: includes/elementor/widgets/custom-list.php:716
+#: includes/elementor/widgets/divider.php:143
+#: includes/elementor/widgets/heading-modern.php:907
+#: includes/elementor/widgets/heading-modern.php:1062
+#: includes/elementor/widgets/mailchimp.php:214
+#: includes/elementor/widgets/mailchimp.php:465
+#: includes/elementor/widgets/mailchimp.php:693
+#: includes/elementor/widgets/svg.php:167
+#: includes/elementor/widgets/testimonial.php:289
+#: includes/elementor/widgets/testimonial.php:872
+#: includes/elementor/widgets/theme-elements/logo.php:227
+#: includes/elementor/widgets/theme-elements/search.php:298
+#: includes/elementor/widgets/video.php:196
+#: includes/elements/before-after.php:113 includes/elements/image.php:107
+#: includes/elements/staff.php:122 includes/elements/video.php:78
+msgid "Width"
+msgstr "عرض"
+
+#: includes/compatibility/wpforms/wpforms.php:75
+#: includes/compatibility/wpforms/wpforms.php:386
+#: includes/compatibility/wpforms/wpforms.php:606
+#: includes/compatibility/wpforms/wpforms.php:837
+#: includes/compatibility/wpforms/wpforms.php:1082
+#: includes/compatibility/wpforms/wpforms.php:1441
+#: includes/elementor/modules/common.php:844
+#: includes/elementor/widgets/contact-form.php:224
+#: includes/elementor/widgets/contact-form.php:536
+#: includes/elementor/widgets/contact-form.php:756
+#: includes/elementor/widgets/contact-form.php:987
+#: includes/elementor/widgets/contact-form.php:1232
+#: includes/elementor/widgets/contact-form.php:1591
+#: includes/elementor/widgets/heading-modern.php:485
+#: includes/elementor/widgets/heading-modern.php:672
+#: includes/elementor/widgets/heading-modern.php:845
+#: includes/elementor/widgets/heading-modern.php:1020
+#: includes/elementor/widgets/image.php:431
+#: includes/elementor/widgets/mailchimp.php:241
+#: includes/elementor/widgets/mailchimp.php:492
+#: includes/elementor/widgets/mailchimp.php:720
+#: includes/elementor/widgets/svg.php:227
+#: includes/elementor/widgets/theme-elements/logo.php:262
+#: includes/elementor/widgets/theme-elements/logo.php:522
+#: includes/elementor/widgets/theme-elements/logo.php:616
+#: includes/elementor/widgets/theme-elements/shopping-cart.php:450
+#, fuzzy
+msgid "Max Width"
+msgstr "عرض"
+
+#: includes/compatibility/wpforms/wpforms.php:102
+#: includes/compatibility/wpforms/wpforms.php:413
+#: includes/compatibility/wpforms/wpforms.php:633
+#: includes/compatibility/wpforms/wpforms.php:864
+#: includes/compatibility/wpforms/wpforms.php:1109
+#: includes/compatibility/wpforms/wpforms.php:1468
+#: includes/elementor/modules/common.php:974
+#: includes/elementor/widgets/before-after.php:199
+#: includes/elementor/widgets/carousel-navigation.php:259
+#: includes/elementor/widgets/contact-form.php:251
+#: includes/elementor/widgets/contact-form.php:563
+#: includes/elementor/widgets/contact-form.php:783
+#: includes/elementor/widgets/contact-form.php:1014
+#: includes/elementor/widgets/contact-form.php:1259
+#: includes/elementor/widgets/contact-form.php:1618
+#: includes/elementor/widgets/custom-list.php:405
+#: includes/elementor/widgets/gmap.php:173
+#: includes/elementor/widgets/heading-modern.php:1091
+#: includes/elementor/widgets/mailchimp.php:268
+#: includes/elementor/widgets/mailchimp.php:519
+#: includes/elementor/widgets/mailchimp.php:747
+#: includes/elementor/widgets/svg.php:199
+#: includes/elementor/widgets/video.php:214
+#: includes/elements/before-after.php:126 includes/elements/gmap.php:52
+#: includes/elements/image.php:125 includes/elements/instagram-feed.php:189
+#: includes/elements/staff.php:140 includes/elements/video.php:92
+msgid "Height"
+msgstr "ارتفاع"
+
+#: includes/compatibility/wpforms/wpforms.php:131
+#: includes/compatibility/wpforms/wpforms.php:450
+#: includes/compatibility/wpforms/wpforms.php:670
+#: includes/compatibility/wpforms/wpforms.php:901
+#: includes/compatibility/wpforms/wpforms.php:1137
+#: includes/compatibility/wpforms/wpforms.php:1505
+#: includes/elementor/widgets/accordion.php:213
+#: includes/elementor/widgets/accordion.php:401
+#: includes/elementor/widgets/accordion.php:681
+#: includes/elementor/widgets/carousel-navigation.php:367
+#: includes/elementor/widgets/carousel-navigation.php:473
+#: includes/elementor/widgets/contact-form.php:280
+#: includes/elementor/widgets/contact-form.php:600
+#: includes/elementor/widgets/contact-form.php:820
+#: includes/elementor/widgets/contact-form.php:1051
+#: includes/elementor/widgets/contact-form.php:1287
+#: includes/elementor/widgets/contact-form.php:1655
+#: includes/elementor/widgets/gallery.php:495
+#: includes/elementor/widgets/icon.php:363
+#: includes/elementor/widgets/mailchimp.php:305
+#: includes/elementor/widgets/mailchimp.php:555
+#: includes/elementor/widgets/modern-button.php:406
+#: includes/elementor/widgets/modern-button.php:459
+#: includes/elementor/widgets/modern-button.php:927
+#: includes/elementor/widgets/modern-button.php:1026
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:993
+#: includes/elementor/widgets/recent-posts-land-style.php:589
+#: includes/elementor/widgets/recent-posts-masonry.php:666
+#: includes/elementor/widgets/recent-posts-timeline.php:599
+#: includes/elementor/widgets/recent-products.php:513
+#: includes/elementor/widgets/tabs.php:240
+#: includes/elementor/widgets/tabs.php:502
+#: includes/elementor/widgets/text.php:1499
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:439
+#: includes/elementor/widgets/theme-elements/logo.php:395
+#: includes/elementor/widgets/theme-elements/menu.php:428
+#: includes/elementor/widgets/theme-elements/menu.php:507
+#: includes/elementor/widgets/theme-elements/menu.php:716
+#: includes/elementor/widgets/theme-elements/menu.php:765
+#: includes/elementor/widgets/theme-elements/menu.php:864
+#: includes/elementor/widgets/theme-elements/menu.php:944
+#: includes/elementor/widgets/theme-elements/menu.php:1227
+#: includes/elementor/widgets/theme-elements/menu.php:1307
+#: includes/elementor/widgets/theme-elements/modern-search.php:497
+#: includes/elementor/widgets/theme-elements/modern-search.php:561
+#: includes/elementor/widgets/theme-elements/search.php:372
+#, fuzzy
+msgid "Border Radius"
+msgstr "کادربندی شده"
+
+#: includes/compatibility/wpforms/wpforms.php:143
+#: includes/compatibility/wpforms/wpforms.php:462
+#: includes/compatibility/wpforms/wpforms.php:682
+#: includes/compatibility/wpforms/wpforms.php:913
+#: includes/compatibility/wpforms/wpforms.php:1149
+#: includes/compatibility/wpforms/wpforms.php:1517
+#: includes/elementor/widgets/accordion.php:376
+#: includes/elementor/widgets/accordion.php:655
+#: includes/elementor/widgets/button.php:262
+#: includes/elementor/widgets/button.php:509
+#: includes/elementor/widgets/carousel-navigation.php:380
+#: includes/elementor/widgets/carousel-navigation.php:486
+#: includes/elementor/widgets/contact-form.php:292
+#: includes/elementor/widgets/contact-form.php:612
+#: includes/elementor/widgets/contact-form.php:832
+#: includes/elementor/widgets/contact-form.php:1063
+#: includes/elementor/widgets/contact-form.php:1299
+#: includes/elementor/widgets/contact-form.php:1667
+#: includes/elementor/widgets/custom-list.php:999
+#: includes/elementor/widgets/custom-list.php:1025
+#: includes/elementor/widgets/heading-modern.php:460
+#: includes/elementor/widgets/heading-modern.php:647
+#: includes/elementor/widgets/heading-modern.php:820
+#: includes/elementor/widgets/heading-modern.php:1134
+#: includes/elementor/widgets/icon.php:314
+#: includes/elementor/widgets/mailchimp.php:317
+#: includes/elementor/widgets/mailchimp.php:567
+#: includes/elementor/widgets/modern-button.php:394
+#: includes/elementor/widgets/modern-button.php:447
+#: includes/elementor/widgets/modern-button.php:915
+#: includes/elementor/widgets/modern-button.php:1014
+#: includes/elementor/widgets/products-grid.php:729
+#: includes/elementor/widgets/products-grid.php:868
+#: includes/elementor/widgets/products-grid.php:961
+#: includes/elementor/widgets/quote.php:342
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1447
+#: includes/elementor/widgets/staff.php:821
+#: includes/elementor/widgets/tabs.php:215
+#: includes/elementor/widgets/tabs.php:476
+#: includes/elementor/widgets/testimonial.php:712
+#: includes/elementor/widgets/testimonial.php:860
+#: includes/elementor/widgets/text.php:398
+#: includes/elementor/widgets/text.php:496
+#: includes/elementor/widgets/text.php:988
+#: includes/elementor/widgets/text.php:1426
+#: includes/elementor/widgets/text.php:1487
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:451
+#: includes/elementor/widgets/theme-elements/menu.php:526
+#: includes/elementor/widgets/theme-elements/menu.php:971
+#: includes/elementor/widgets/theme-elements/menu.php:1334
+#: includes/elementor/widgets/theme-elements/modern-search.php:474
+#: includes/elementor/widgets/theme-elements/modern-search.php:539
+#: includes/elementor/widgets/theme-elements/modern-search.php:655
+#: includes/elementor/widgets/theme-elements/search.php:339
+#: includes/elementor/widgets/theme-elements/search.php:425
+#: includes/elementor/widgets/theme-elements/select.php:509
+#: includes/elementor/widgets/theme-elements/shopping-cart.php:343
+#: includes/elementor/widgets/theme-elements/shopping-cart.php:469
+#: includes/elementor/widgets/theme-elements/shopping-cart.php:534
+#: includes/elementor/widgets/touch-slider.php:319
+#: includes/elementor/widgets/touch-slider.php:376
+#: includes/elementor/widgets/touch-slider.php:436
+#, fuzzy
+msgid "Padding"
+msgstr "تیتر گذاری"
+
+#: includes/compatibility/wpforms/wpforms.php:156
+#: includes/compatibility/wpforms/wpforms.php:926
+#: includes/compatibility/wpforms/wpforms.php:1162
+#: includes/compatibility/wpforms/wpforms.php:1530
+#: includes/elementor/widgets/accordion.php:200
+#: includes/elementor/widgets/accordion.php:388
+#: includes/elementor/widgets/accordion.php:668
+#: includes/elementor/widgets/contact-form.php:305
+#: includes/elementor/widgets/contact-form.php:1076
+#: includes/elementor/widgets/contact-form.php:1312
+#: includes/elementor/widgets/contact-form.php:1680
+#: includes/elementor/widgets/custom-list.php:209
+#: includes/elementor/widgets/custom-list.php:265
+#: includes/elementor/widgets/custom-list.php:986
+#: includes/elementor/widgets/custom-list.php:1038
+#: includes/elementor/widgets/heading-modern.php:447
+#: includes/elementor/widgets/heading-modern.php:634
+#: includes/elementor/widgets/heading-modern.php:807
+#: includes/elementor/widgets/heading-modern.php:929
+#: includes/elementor/widgets/heading-modern.php:1007
+#: includes/elementor/widgets/heading-modern.php:1121
+#: includes/elementor/widgets/modern-button.php:681
+#: includes/elementor/widgets/modern-button.php:797
+#: includes/elementor/widgets/modern-button.php:903
+#: includes/elementor/widgets/modern-button.php:1002
+#: includes/elementor/widgets/quote.php:297
+#: includes/elementor/widgets/tabs.php:489
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:219
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:350
+#: includes/elementor/widgets/theme-elements/logo.php:500
+#: includes/elementor/widgets/theme-elements/logo.php:594
+#: includes/elementor/widgets/theme-elements/menu.php:539
+#: includes/elementor/widgets/theme-elements/menu.php:984
+#: includes/elementor/widgets/theme-elements/menu.php:1347
+#: includes/elementor/widgets/theme-elements/modern-search.php:886
+#: includes/elementor/widgets/theme-elements/search.php:327
+#: includes/elementor/widgets/theme-elements/search.php:437
+#: includes/elementor/widgets/theme-elements/select.php:521
+#: includes/elementor/widgets/theme-elements/site-title.php:341
+#: includes/elementor/widgets/theme-elements/site-title.php:409
+#: includes/elementor/widgets/theme-elements/site-title.php:477
+msgid "Margin"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:172
+#: includes/compatibility/wpforms/wpforms.php:478
+#: includes/compatibility/wpforms/wpforms.php:698
+#: includes/compatibility/wpforms/wpforms.php:942
+#: includes/compatibility/wpforms/wpforms.php:1178
+#: includes/compatibility/wpforms/wpforms.php:1546
+#: includes/elementor/widgets/accordion.php:229
+#: includes/elementor/widgets/accordion.php:417
+#: includes/elementor/widgets/accordion.php:549
+#: includes/elementor/widgets/button.php:216
+#: includes/elementor/widgets/button.php:300
+#: includes/elementor/widgets/button.php:467
+#: includes/elementor/widgets/button.php:537
+#: includes/elementor/widgets/carousel-navigation.php:289
+#: includes/elementor/widgets/contact-form.php:321
+#: includes/elementor/widgets/contact-form.php:628
+#: includes/elementor/widgets/contact-form.php:848
+#: includes/elementor/widgets/contact-form.php:1092
+#: includes/elementor/widgets/contact-form.php:1328
+#: includes/elementor/widgets/contact-form.php:1696
+#: includes/elementor/widgets/custom-list.php:902
+#: includes/elementor/widgets/custom-list.php:1054
+#: includes/elementor/widgets/heading-modern.php:369
+#: includes/elementor/widgets/heading-modern.php:556
+#: includes/elementor/widgets/heading-modern.php:729
+#: includes/elementor/widgets/icon.php:208
+#: includes/elementor/widgets/image.php:504
+#: includes/elementor/widgets/mailchimp.php:333
+#: includes/elementor/widgets/mailchimp.php:582
+#: includes/elementor/widgets/modern-button.php:309
+#: includes/elementor/widgets/modern-button.php:369
+#: includes/elementor/widgets/modern-button.php:494
+#: includes/elementor/widgets/modern-button.php:598
+#: includes/elementor/widgets/modern-button.php:714
+#: includes/elementor/widgets/modern-button.php:844
+#: includes/elementor/widgets/products-grid.php:398
+#: includes/elementor/widgets/products-grid.php:467
+#: includes/elementor/widgets/products-grid.php:538
+#: includes/elementor/widgets/products-grid.php:607
+#: includes/elementor/widgets/products-grid.php:676
+#: includes/elementor/widgets/products-grid.php:815
+#: includes/elementor/widgets/products-grid.php:908
+#: includes/elementor/widgets/products-grid.php:1000
+#: includes/elementor/widgets/recent-comments.php:186
+#: includes/elementor/widgets/recent-comments.php:271
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1010
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1077
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1183
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1374
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1491
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1612
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1743
+#: includes/elementor/widgets/recent-posts-grid-carousel.php:1866
+#: includes/elementor/widgets/recent-posts-land-style.php:635
+#: includes/elementor/widgets/recent-posts-land-style.php:741
+#: includes/elementor/widgets/recent-posts-land-style.php:928
+#: includes/elementor/widgets/recent-posts-masonry.php:683
+#: includes/elementor/widgets/recent-posts-masonry.php:750
+#: includes/elementor/widgets/recent-posts-masonry.php:856
+#: includes/elementor/widgets/recent-posts-masonry.php:1043
+#: includes/elementor/widgets/recent-posts-masonry.php:1127
+#: includes/elementor/widgets/recent-posts-masonry.php:1262
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:498
+#: includes/elementor/widgets/recent-posts-tiles-carousel.php:604
+#: includes/elementor/widgets/recent-posts-tiles.php:439
+#: includes/elementor/widgets/recent-posts-tiles.php:545
+#: includes/elementor/widgets/recent-posts-timeline.php:633
+#: includes/elementor/widgets/recent-posts-timeline.php:739
+#: includes/elementor/widgets/recent-posts-timeline.php:926
+#: includes/elementor/widgets/recent-products.php:611
+#: includes/elementor/widgets/staff.php:470
+#: includes/elementor/widgets/staff.php:723
+#: includes/elementor/widgets/svg.php:325
+#: includes/elementor/widgets/tabs.php:256
+#: includes/elementor/widgets/tabs.php:388
+#: includes/elementor/widgets/testimonial.php:364
+#: includes/elementor/widgets/testimonial.php:482
+#: includes/elementor/widgets/testimonial.php:604
+#: includes/elementor/widgets/testimonial.php:904
+#: includes/elementor/widgets/text.php:513
+#: includes/elementor/widgets/text.php:705
+#: includes/elementor/widgets/text.php:812
+#: includes/elementor/widgets/text.php:925
+#: includes/elementor/widgets/text.php:1087
+#: includes/elementor/widgets/text.php:1214
+#: includes/elementor/widgets/text.php:1271
+#: includes/elementor/widgets/text.php:1407
+#: includes/elementor/widgets/text.php:1515
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:466
+#: includes/elementor/widgets/theme-elements/copyright.php:180
+#: includes/elementor/widgets/theme-elements/logo.php:298
+#: includes/elementor/widgets/theme-elements/menu.php:364
+#: includes/elementor/widgets/theme-elements/menu.php:691
+#: includes/elementor/widgets/theme-elements/menu.php:807
+#: includes/elementor/widgets/theme-elements/menu.php:1032
+#: includes/elementor/widgets/theme-elements/menu.php:1171
+#: includes/elementor/widgets/theme-elements/modern-search.php:251
+#: includes/elementor/widgets/theme-elements/modern-search.php:362
+#: includes/elementor/widgets/theme-elements/modern-search.php:457
+#: includes/elementor/widgets/theme-elements/select.php:314
+#: includes/elementor/widgets/theme-elements/select.php:581
+#: includes/elements/button.php:116 includes/elements/text.php:735
+#: includes/general-hooks.php:361 includes/general-hooks.php:773
+msgid "Normal"
+msgstr "معمولی"
+
+#: includes/compatibility/wpforms/wpforms.php:238
+#: includes/compatibility/wpforms/wpforms.php:528
+#: includes/compatibility/wpforms/wpforms.php:748
+#: includes/compatibility/wpforms/wpforms.php:992
+#: includes/compatibility/wpforms/wpforms.php:1244
+#: includes/compatibility/wpforms/wpforms.php:1608
+#: includes/elementor/widgets/contact-form.php:387
+#: includes/elementor/widgets/contact-form.php:678
+#: includes/elementor/widgets/contact-form.php:898
+#: includes/elementor/widgets/contact-form.php:1142
+#: includes/elementor/widgets/contact-form.php:1394
+#: includes/elementor/widgets/contact-form.php:1746
+#: includes/elementor/widgets/image.php:575
+#: includes/elementor/widgets/mailchimp.php:383
+#: includes/elementor/widgets/mailchimp.php:655
+#: includes/elementor/widgets/theme-elements/breadcrumbs.php:516
+#: includes/elementor/widgets/theme-elements/logo.php:365
+msgid "Transition Duration"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:261
+#: includes/compatibility/wpforms/wpforms.php:1267
+#: includes/elementor/widgets/contact-form.php:410
+#: includes/elementor/widgets/contact-form.php:1417
+msgid "Focus"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:303
+#: includes/elementor/widgets/contact-form.php:453
+msgid "Input Placeholder"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:340
+#: includes/elementor/widgets/contact-form.php:490
+msgid "Text Inputs"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:560
+#: includes/elementor/widgets/contact-form.php:710
+msgid "Email Inputs"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:779
+#: includes/elementor/widgets/contact-form.php:929
+#: includes/elementor/widgets/theme-elements/shopping-cart.php:361
+msgid "Dropdown"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:1024
+#: includes/elementor/widgets/contact-form.php:1174
+msgid "Textarea"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:1309
+#: includes/elementor/widgets/contact-form.php:1459
+msgid "Textarea Placeholder"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:1346
+#: includes/elementor/widgets/contact-form.php:1496
+msgid "Labels"
+msgstr ""
+
+#: includes/compatibility/wpforms/wpforms.php:1383
+#: includes/elementor/widgets/contact-form.php:1533
+#, fuzzy
+msgid "Submit Button"
+msgstr "تایید"
 
 #: includes/elementor/class-auxin-elementor-core-elements.php:435
 msgid "Element class \"%s\" not found."
@@ -3165,30 +3817,6 @@ msgstr ""
 msgid "Dimensions (extra)"
 msgstr ""
 
-#: includes/elementor/modules/common.php:844
-#: includes/elementor/widgets/contact-form.php:224
-#: includes/elementor/widgets/contact-form.php:536
-#: includes/elementor/widgets/contact-form.php:756
-#: includes/elementor/widgets/contact-form.php:987
-#: includes/elementor/widgets/contact-form.php:1232
-#: includes/elementor/widgets/contact-form.php:1591
-#: includes/elementor/widgets/heading-modern.php:485
-#: includes/elementor/widgets/heading-modern.php:672
-#: includes/elementor/widgets/heading-modern.php:845
-#: includes/elementor/widgets/heading-modern.php:1020
-#: includes/elementor/widgets/image.php:431
-#: includes/elementor/widgets/mailchimp.php:241
-#: includes/elementor/widgets/mailchimp.php:492
-#: includes/elementor/widgets/mailchimp.php:720
-#: includes/elementor/widgets/svg.php:227
-#: includes/elementor/widgets/theme-elements/logo.php:262
-#: includes/elementor/widgets/theme-elements/logo.php:522
-#: includes/elementor/widgets/theme-elements/logo.php:616
-#: includes/elementor/widgets/theme-elements/shopping-cart.php:450
-#, fuzzy
-msgid "Max Width"
-msgstr "عرض"
-
 #: includes/elementor/modules/common.php:876
 #: includes/elementor/widgets/image.php:460
 #: includes/elementor/widgets/svg.php:255
@@ -3204,29 +3832,6 @@ msgstr "عرض"
 #: includes/elementor/modules/common.php:941
 #, fuzzy
 msgid "Min Height"
-msgstr "ارتفاع"
-
-#: includes/elementor/modules/common.php:974
-#: includes/elementor/widgets/before-after.php:199
-#: includes/elementor/widgets/carousel-navigation.php:259
-#: includes/elementor/widgets/contact-form.php:251
-#: includes/elementor/widgets/contact-form.php:563
-#: includes/elementor/widgets/contact-form.php:783
-#: includes/elementor/widgets/contact-form.php:1014
-#: includes/elementor/widgets/contact-form.php:1259
-#: includes/elementor/widgets/contact-form.php:1618
-#: includes/elementor/widgets/custom-list.php:405
-#: includes/elementor/widgets/gmap.php:173
-#: includes/elementor/widgets/heading-modern.php:1091
-#: includes/elementor/widgets/mailchimp.php:268
-#: includes/elementor/widgets/mailchimp.php:519
-#: includes/elementor/widgets/mailchimp.php:747
-#: includes/elementor/widgets/svg.php:199
-#: includes/elementor/widgets/video.php:214
-#: includes/elements/before-after.php:126 includes/elements/gmap.php:52
-#: includes/elements/image.php:125 includes/elements/instagram-feed.php:189
-#: includes/elements/staff.php:140 includes/elements/video.php:92
-msgid "Height"
 msgstr "ارتفاع"
 
 #: includes/elementor/modules/common.php:1006
@@ -4579,190 +5184,6 @@ msgstr ""
 msgid "Item Wrapper"
 msgstr ""
 
-#: includes/elementor/widgets/accordion.php:200
-#: includes/elementor/widgets/accordion.php:388
-#: includes/elementor/widgets/accordion.php:668
-#: includes/elementor/widgets/contact-form.php:305
-#: includes/elementor/widgets/contact-form.php:1076
-#: includes/elementor/widgets/contact-form.php:1312
-#: includes/elementor/widgets/contact-form.php:1680
-#: includes/elementor/widgets/custom-list.php:209
-#: includes/elementor/widgets/custom-list.php:265
-#: includes/elementor/widgets/custom-list.php:986
-#: includes/elementor/widgets/custom-list.php:1038
-#: includes/elementor/widgets/heading-modern.php:447
-#: includes/elementor/widgets/heading-modern.php:634
-#: includes/elementor/widgets/heading-modern.php:807
-#: includes/elementor/widgets/heading-modern.php:929
-#: includes/elementor/widgets/heading-modern.php:1007
-#: includes/elementor/widgets/heading-modern.php:1121
-#: includes/elementor/widgets/modern-button.php:681
-#: includes/elementor/widgets/modern-button.php:797
-#: includes/elementor/widgets/modern-button.php:903
-#: includes/elementor/widgets/modern-button.php:1002
-#: includes/elementor/widgets/quote.php:297
-#: includes/elementor/widgets/tabs.php:489
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:219
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:350
-#: includes/elementor/widgets/theme-elements/logo.php:500
-#: includes/elementor/widgets/theme-elements/logo.php:594
-#: includes/elementor/widgets/theme-elements/menu.php:539
-#: includes/elementor/widgets/theme-elements/menu.php:984
-#: includes/elementor/widgets/theme-elements/menu.php:1347
-#: includes/elementor/widgets/theme-elements/modern-search.php:886
-#: includes/elementor/widgets/theme-elements/search.php:327
-#: includes/elementor/widgets/theme-elements/search.php:437
-#: includes/elementor/widgets/theme-elements/select.php:521
-#: includes/elementor/widgets/theme-elements/site-title.php:341
-#: includes/elementor/widgets/theme-elements/site-title.php:409
-#: includes/elementor/widgets/theme-elements/site-title.php:477
-msgid "Margin"
-msgstr ""
-
-#: includes/elementor/widgets/accordion.php:213
-#: includes/elementor/widgets/accordion.php:401
-#: includes/elementor/widgets/accordion.php:681
-#: includes/elementor/widgets/carousel-navigation.php:367
-#: includes/elementor/widgets/carousel-navigation.php:473
-#: includes/elementor/widgets/contact-form.php:280
-#: includes/elementor/widgets/contact-form.php:600
-#: includes/elementor/widgets/contact-form.php:820
-#: includes/elementor/widgets/contact-form.php:1051
-#: includes/elementor/widgets/contact-form.php:1287
-#: includes/elementor/widgets/contact-form.php:1655
-#: includes/elementor/widgets/gallery.php:495
-#: includes/elementor/widgets/icon.php:363
-#: includes/elementor/widgets/mailchimp.php:305
-#: includes/elementor/widgets/mailchimp.php:555
-#: includes/elementor/widgets/modern-button.php:406
-#: includes/elementor/widgets/modern-button.php:459
-#: includes/elementor/widgets/modern-button.php:927
-#: includes/elementor/widgets/modern-button.php:1026
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:993
-#: includes/elementor/widgets/recent-posts-land-style.php:589
-#: includes/elementor/widgets/recent-posts-masonry.php:666
-#: includes/elementor/widgets/recent-posts-timeline.php:599
-#: includes/elementor/widgets/recent-products.php:513
-#: includes/elementor/widgets/tabs.php:240
-#: includes/elementor/widgets/tabs.php:502
-#: includes/elementor/widgets/text.php:1499
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:439
-#: includes/elementor/widgets/theme-elements/logo.php:395
-#: includes/elementor/widgets/theme-elements/menu.php:428
-#: includes/elementor/widgets/theme-elements/menu.php:507
-#: includes/elementor/widgets/theme-elements/menu.php:716
-#: includes/elementor/widgets/theme-elements/menu.php:765
-#: includes/elementor/widgets/theme-elements/menu.php:864
-#: includes/elementor/widgets/theme-elements/menu.php:944
-#: includes/elementor/widgets/theme-elements/menu.php:1227
-#: includes/elementor/widgets/theme-elements/menu.php:1307
-#: includes/elementor/widgets/theme-elements/modern-search.php:497
-#: includes/elementor/widgets/theme-elements/modern-search.php:561
-#: includes/elementor/widgets/theme-elements/search.php:372
-#, fuzzy
-msgid "Border Radius"
-msgstr "کادربندی شده"
-
-#: includes/elementor/widgets/accordion.php:229
-#: includes/elementor/widgets/accordion.php:417
-#: includes/elementor/widgets/accordion.php:549
-#: includes/elementor/widgets/button.php:216
-#: includes/elementor/widgets/button.php:300
-#: includes/elementor/widgets/button.php:467
-#: includes/elementor/widgets/button.php:537
-#: includes/elementor/widgets/carousel-navigation.php:289
-#: includes/elementor/widgets/contact-form.php:321
-#: includes/elementor/widgets/contact-form.php:628
-#: includes/elementor/widgets/contact-form.php:848
-#: includes/elementor/widgets/contact-form.php:1092
-#: includes/elementor/widgets/contact-form.php:1328
-#: includes/elementor/widgets/contact-form.php:1696
-#: includes/elementor/widgets/custom-list.php:902
-#: includes/elementor/widgets/custom-list.php:1054
-#: includes/elementor/widgets/heading-modern.php:369
-#: includes/elementor/widgets/heading-modern.php:556
-#: includes/elementor/widgets/heading-modern.php:729
-#: includes/elementor/widgets/icon.php:208
-#: includes/elementor/widgets/image.php:504
-#: includes/elementor/widgets/mailchimp.php:333
-#: includes/elementor/widgets/mailchimp.php:582
-#: includes/elementor/widgets/modern-button.php:309
-#: includes/elementor/widgets/modern-button.php:369
-#: includes/elementor/widgets/modern-button.php:494
-#: includes/elementor/widgets/modern-button.php:598
-#: includes/elementor/widgets/modern-button.php:714
-#: includes/elementor/widgets/modern-button.php:844
-#: includes/elementor/widgets/products-grid.php:398
-#: includes/elementor/widgets/products-grid.php:467
-#: includes/elementor/widgets/products-grid.php:538
-#: includes/elementor/widgets/products-grid.php:607
-#: includes/elementor/widgets/products-grid.php:676
-#: includes/elementor/widgets/products-grid.php:815
-#: includes/elementor/widgets/products-grid.php:908
-#: includes/elementor/widgets/products-grid.php:1000
-#: includes/elementor/widgets/recent-comments.php:186
-#: includes/elementor/widgets/recent-comments.php:271
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1010
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1077
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1183
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1374
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1491
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1612
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1743
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1866
-#: includes/elementor/widgets/recent-posts-land-style.php:635
-#: includes/elementor/widgets/recent-posts-land-style.php:741
-#: includes/elementor/widgets/recent-posts-land-style.php:928
-#: includes/elementor/widgets/recent-posts-masonry.php:683
-#: includes/elementor/widgets/recent-posts-masonry.php:750
-#: includes/elementor/widgets/recent-posts-masonry.php:856
-#: includes/elementor/widgets/recent-posts-masonry.php:1043
-#: includes/elementor/widgets/recent-posts-masonry.php:1127
-#: includes/elementor/widgets/recent-posts-masonry.php:1262
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:498
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:604
-#: includes/elementor/widgets/recent-posts-tiles.php:439
-#: includes/elementor/widgets/recent-posts-tiles.php:545
-#: includes/elementor/widgets/recent-posts-timeline.php:633
-#: includes/elementor/widgets/recent-posts-timeline.php:739
-#: includes/elementor/widgets/recent-posts-timeline.php:926
-#: includes/elementor/widgets/recent-products.php:611
-#: includes/elementor/widgets/staff.php:470
-#: includes/elementor/widgets/staff.php:723
-#: includes/elementor/widgets/svg.php:325
-#: includes/elementor/widgets/tabs.php:256
-#: includes/elementor/widgets/tabs.php:388
-#: includes/elementor/widgets/testimonial.php:364
-#: includes/elementor/widgets/testimonial.php:482
-#: includes/elementor/widgets/testimonial.php:604
-#: includes/elementor/widgets/testimonial.php:904
-#: includes/elementor/widgets/text.php:513
-#: includes/elementor/widgets/text.php:705
-#: includes/elementor/widgets/text.php:812
-#: includes/elementor/widgets/text.php:925
-#: includes/elementor/widgets/text.php:1087
-#: includes/elementor/widgets/text.php:1214
-#: includes/elementor/widgets/text.php:1271
-#: includes/elementor/widgets/text.php:1407
-#: includes/elementor/widgets/text.php:1515
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:466
-#: includes/elementor/widgets/theme-elements/copyright.php:180
-#: includes/elementor/widgets/theme-elements/logo.php:298
-#: includes/elementor/widgets/theme-elements/menu.php:364
-#: includes/elementor/widgets/theme-elements/menu.php:691
-#: includes/elementor/widgets/theme-elements/menu.php:807
-#: includes/elementor/widgets/theme-elements/menu.php:1032
-#: includes/elementor/widgets/theme-elements/menu.php:1171
-#: includes/elementor/widgets/theme-elements/modern-search.php:251
-#: includes/elementor/widgets/theme-elements/modern-search.php:362
-#: includes/elementor/widgets/theme-elements/modern-search.php:457
-#: includes/elementor/widgets/theme-elements/select.php:314
-#: includes/elementor/widgets/theme-elements/select.php:581
-#: includes/elements/button.php:116 includes/elements/text.php:735
-#: includes/general-hooks.php:361 includes/general-hooks.php:773
-msgid "Normal"
-msgstr "معمولی"
-
 #: includes/elementor/widgets/accordion.php:237
 #: includes/elementor/widgets/accordion.php:275
 #: includes/elementor/widgets/accordion.php:313
@@ -4815,236 +5236,6 @@ msgstr "بزرگنمایی"
 #: includes/elementor/widgets/theme-elements/modern-search.php:593
 msgid "Help"
 msgstr ""
-
-#: includes/elementor/widgets/accordion.php:376
-#: includes/elementor/widgets/accordion.php:655
-#: includes/elementor/widgets/button.php:262
-#: includes/elementor/widgets/button.php:509
-#: includes/elementor/widgets/carousel-navigation.php:380
-#: includes/elementor/widgets/carousel-navigation.php:486
-#: includes/elementor/widgets/contact-form.php:292
-#: includes/elementor/widgets/contact-form.php:612
-#: includes/elementor/widgets/contact-form.php:832
-#: includes/elementor/widgets/contact-form.php:1063
-#: includes/elementor/widgets/contact-form.php:1299
-#: includes/elementor/widgets/contact-form.php:1667
-#: includes/elementor/widgets/custom-list.php:999
-#: includes/elementor/widgets/custom-list.php:1025
-#: includes/elementor/widgets/heading-modern.php:460
-#: includes/elementor/widgets/heading-modern.php:647
-#: includes/elementor/widgets/heading-modern.php:820
-#: includes/elementor/widgets/heading-modern.php:1134
-#: includes/elementor/widgets/icon.php:314
-#: includes/elementor/widgets/mailchimp.php:317
-#: includes/elementor/widgets/mailchimp.php:567
-#: includes/elementor/widgets/modern-button.php:394
-#: includes/elementor/widgets/modern-button.php:447
-#: includes/elementor/widgets/modern-button.php:915
-#: includes/elementor/widgets/modern-button.php:1014
-#: includes/elementor/widgets/products-grid.php:729
-#: includes/elementor/widgets/products-grid.php:868
-#: includes/elementor/widgets/products-grid.php:961
-#: includes/elementor/widgets/quote.php:342
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1447
-#: includes/elementor/widgets/staff.php:821
-#: includes/elementor/widgets/tabs.php:215
-#: includes/elementor/widgets/tabs.php:476
-#: includes/elementor/widgets/testimonial.php:712
-#: includes/elementor/widgets/testimonial.php:860
-#: includes/elementor/widgets/text.php:398
-#: includes/elementor/widgets/text.php:496
-#: includes/elementor/widgets/text.php:988
-#: includes/elementor/widgets/text.php:1426
-#: includes/elementor/widgets/text.php:1487
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:451
-#: includes/elementor/widgets/theme-elements/menu.php:526
-#: includes/elementor/widgets/theme-elements/menu.php:971
-#: includes/elementor/widgets/theme-elements/menu.php:1334
-#: includes/elementor/widgets/theme-elements/modern-search.php:474
-#: includes/elementor/widgets/theme-elements/modern-search.php:539
-#: includes/elementor/widgets/theme-elements/modern-search.php:655
-#: includes/elementor/widgets/theme-elements/search.php:339
-#: includes/elementor/widgets/theme-elements/search.php:425
-#: includes/elementor/widgets/theme-elements/select.php:509
-#: includes/elementor/widgets/theme-elements/shopping-cart.php:343
-#: includes/elementor/widgets/theme-elements/shopping-cart.php:469
-#: includes/elementor/widgets/theme-elements/shopping-cart.php:534
-#: includes/elementor/widgets/touch-slider.php:319
-#: includes/elementor/widgets/touch-slider.php:376
-#: includes/elementor/widgets/touch-slider.php:436
-#, fuzzy
-msgid "Padding"
-msgstr "تیتر گذاری"
-
-#: includes/elementor/widgets/accordion.php:556
-#: includes/elementor/widgets/accordion.php:576
-#: includes/elementor/widgets/accordion.php:596
-#: includes/elementor/widgets/accordion.php:633
-#: includes/elementor/widgets/button.php:474
-#: includes/elementor/widgets/button.php:494
-#: includes/elementor/widgets/button.php:544
-#: includes/elementor/widgets/button.php:584
-#: includes/elementor/widgets/carousel-navigation.php:314
-#: includes/elementor/widgets/circle-chart.php:288
-#: includes/elementor/widgets/circle-chart.php:319
-#: includes/elementor/widgets/circle-chart.php:350
-#: includes/elementor/widgets/contact-box.php:376
-#: includes/elementor/widgets/contact-form.php:186
-#: includes/elementor/widgets/contact-form.php:473
-#: includes/elementor/widgets/contact-form.php:498
-#: includes/elementor/widgets/contact-form.php:718
-#: includes/elementor/widgets/contact-form.php:949
-#: includes/elementor/widgets/contact-form.php:1194
-#: includes/elementor/widgets/contact-form.php:1479
-#: includes/elementor/widgets/contact-form.php:1516
-#: includes/elementor/widgets/contact-form.php:1553
-#: includes/elementor/widgets/custom-list.php:181
-#: includes/elementor/widgets/custom-list.php:237
-#: includes/elementor/widgets/custom-list.php:646
-#: includes/elementor/widgets/custom-list.php:742
-#: includes/elementor/widgets/custom-list.php:783
-#: includes/elementor/widgets/custom-list.php:841
-#: includes/elementor/widgets/custom-list.php:909
-#: includes/elementor/widgets/custom-list.php:939
-#: includes/elementor/widgets/divider.php:381
-#: includes/elementor/widgets/heading-modern.php:376
-#: includes/elementor/widgets/heading-modern.php:414
-#: includes/elementor/widgets/heading-modern.php:563
-#: includes/elementor/widgets/heading-modern.php:601
-#: includes/elementor/widgets/heading-modern.php:736
-#: includes/elementor/widgets/heading-modern.php:774
-#: includes/elementor/widgets/heading-modern.php:942
-#: includes/elementor/widgets/heading-modern.php:985
-#: includes/elementor/widgets/mailchimp.php:203
-#: includes/elementor/widgets/mailchimp.php:432
-#: includes/elementor/widgets/mailchimp.php:589
-#: includes/elementor/widgets/mailchimp.php:627
-#: includes/elementor/widgets/modern-button.php:512
-#: includes/elementor/widgets/modern-button.php:553
-#: includes/elementor/widgets/modern-button.php:616
-#: includes/elementor/widgets/modern-button.php:657
-#: includes/elementor/widgets/modern-button.php:732
-#: includes/elementor/widgets/modern-button.php:773
-#: includes/elementor/widgets/modern-button.php:874
-#: includes/elementor/widgets/modern-button.php:973
-#: includes/elementor/widgets/products-grid.php:405
-#: includes/elementor/widgets/products-grid.php:425
-#: includes/elementor/widgets/products-grid.php:474
-#: includes/elementor/widgets/products-grid.php:494
-#: includes/elementor/widgets/products-grid.php:545
-#: includes/elementor/widgets/products-grid.php:565
-#: includes/elementor/widgets/products-grid.php:614
-#: includes/elementor/widgets/products-grid.php:634
-#: includes/elementor/widgets/products-grid.php:683
-#: includes/elementor/widgets/products-grid.php:703
-#: includes/elementor/widgets/products-grid.php:822
-#: includes/elementor/widgets/products-grid.php:842
-#: includes/elementor/widgets/products-grid.php:915
-#: includes/elementor/widgets/products-grid.php:935
-#: includes/elementor/widgets/products-grid.php:1025
-#: includes/elementor/widgets/products-grid.php:1083
-#: includes/elementor/widgets/recent-comments.php:193
-#: includes/elementor/widgets/recent-comments.php:213
-#: includes/elementor/widgets/recent-comments.php:278
-#: includes/elementor/widgets/recent-comments.php:298
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1087
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1113
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1193
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1219
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1307
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1498
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1518
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1891
-#: includes/elementor/widgets/recent-posts-grid-carousel.php:1949
-#: includes/elementor/widgets/recent-posts-land-style.php:645
-#: includes/elementor/widgets/recent-posts-land-style.php:671
-#: includes/elementor/widgets/recent-posts-land-style.php:751
-#: includes/elementor/widgets/recent-posts-land-style.php:777
-#: includes/elementor/widgets/recent-posts-land-style.php:865
-#: includes/elementor/widgets/recent-posts-land-style.php:935
-#: includes/elementor/widgets/recent-posts-land-style.php:955
-#: includes/elementor/widgets/recent-posts-masonry.php:760
-#: includes/elementor/widgets/recent-posts-masonry.php:786
-#: includes/elementor/widgets/recent-posts-masonry.php:866
-#: includes/elementor/widgets/recent-posts-masonry.php:892
-#: includes/elementor/widgets/recent-posts-masonry.php:980
-#: includes/elementor/widgets/recent-posts-masonry.php:1050
-#: includes/elementor/widgets/recent-posts-masonry.php:1070
-#: includes/elementor/widgets/recent-posts-masonry.php:1287
-#: includes/elementor/widgets/recent-posts-masonry.php:1345
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:508
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:534
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:614
-#: includes/elementor/widgets/recent-posts-tiles-carousel.php:640
-#: includes/elementor/widgets/recent-posts-tiles.php:449
-#: includes/elementor/widgets/recent-posts-tiles.php:475
-#: includes/elementor/widgets/recent-posts-tiles.php:555
-#: includes/elementor/widgets/recent-posts-tiles.php:581
-#: includes/elementor/widgets/recent-posts-timeline.php:643
-#: includes/elementor/widgets/recent-posts-timeline.php:669
-#: includes/elementor/widgets/recent-posts-timeline.php:749
-#: includes/elementor/widgets/recent-posts-timeline.php:775
-#: includes/elementor/widgets/recent-posts-timeline.php:863
-#: includes/elementor/widgets/recent-posts-timeline.php:933
-#: includes/elementor/widgets/recent-posts-timeline.php:953
-#: includes/elementor/widgets/recent-products.php:545
-#: includes/elementor/widgets/recent-products.php:621
-#: includes/elementor/widgets/recent-products.php:647
-#: includes/elementor/widgets/responsive-table.php:186
-#: includes/elementor/widgets/responsive-table.php:255
-#: includes/elementor/widgets/responsive-table.php:285
-#: includes/elementor/widgets/responsive-table.php:315
-#: includes/elementor/widgets/staff.php:480
-#: includes/elementor/widgets/staff.php:506
-#: includes/elementor/widgets/staff.php:593
-#: includes/elementor/widgets/staff.php:657
-#: includes/elementor/widgets/staff.php:733
-#: includes/elementor/widgets/staff.php:759
-#: includes/elementor/widgets/tabs.php:395
-#: includes/elementor/widgets/tabs.php:415
-#: includes/elementor/widgets/tabs.php:454
-#: includes/elementor/widgets/testimonial.php:374
-#: includes/elementor/widgets/testimonial.php:414
-#: includes/elementor/widgets/testimonial.php:492
-#: includes/elementor/widgets/testimonial.php:532
-#: includes/elementor/widgets/testimonial.php:614
-#: includes/elementor/widgets/testimonial.php:654
-#: includes/elementor/widgets/text.php:712
-#: includes/elementor/widgets/text.php:732
-#: includes/elementor/widgets/text.php:819
-#: includes/elementor/widgets/text.php:839
-#: includes/elementor/widgets/text.php:932
-#: includes/elementor/widgets/text.php:952
-#: includes/elementor/widgets/text.php:1221
-#: includes/elementor/widgets/text.php:1241
-#: includes/elementor/widgets/text.php:1278
-#: includes/elementor/widgets/text.php:1318
-#: includes/elementor/widgets/theme-elements/copyright.php:187
-#: includes/elementor/widgets/theme-elements/copyright.php:226
-#: includes/elementor/widgets/theme-elements/current-time.php:177
-#: includes/elementor/widgets/theme-elements/logo.php:467
-#: includes/elementor/widgets/theme-elements/logo.php:561
-#: includes/elementor/widgets/theme-elements/menu.php:371
-#: includes/elementor/widgets/theme-elements/menu.php:450
-#: includes/elementor/widgets/theme-elements/menu.php:565
-#: includes/elementor/widgets/theme-elements/menu.php:814
-#: includes/elementor/widgets/theme-elements/menu.php:895
-#: includes/elementor/widgets/theme-elements/menu.php:1039
-#: includes/elementor/widgets/theme-elements/menu.php:1060
-#: includes/elementor/widgets/theme-elements/menu.php:1178
-#: includes/elementor/widgets/theme-elements/menu.php:1258
-#: includes/elementor/widgets/theme-elements/modern-search.php:258
-#: includes/elementor/widgets/theme-elements/modern-search.php:307
-#: includes/elementor/widgets/theme-elements/modern-search.php:369
-#: includes/elementor/widgets/theme-elements/modern-search.php:408
-#: includes/elementor/widgets/theme-elements/site-title.php:308
-#: includes/elementor/widgets/theme-elements/site-title.php:376
-#: includes/elementor/widgets/theme-elements/site-title.php:444
-#: includes/elementor/widgets/touch-slider.php:348
-#: includes/elementor/widgets/touch-slider.php:408
-#, fuzzy
-msgid "Color"
-msgstr "جعبه رنگ"
 
 #: includes/elementor/widgets/audio.php:47
 #, fuzzy
@@ -5453,33 +5644,6 @@ msgstr "پرش از ابتدا"
 #: includes/elementor/widgets/before-after.php:161
 msgid "How much of the before image is visible when the page loads."
 msgstr ""
-
-#: includes/elementor/widgets/before-after.php:180
-#: includes/elementor/widgets/carousel-navigation.php:230
-#: includes/elementor/widgets/contact-form.php:197
-#: includes/elementor/widgets/contact-form.php:509
-#: includes/elementor/widgets/contact-form.php:729
-#: includes/elementor/widgets/contact-form.php:960
-#: includes/elementor/widgets/contact-form.php:1205
-#: includes/elementor/widgets/contact-form.php:1564
-#: includes/elementor/widgets/custom-list.php:428
-#: includes/elementor/widgets/custom-list.php:716
-#: includes/elementor/widgets/divider.php:143
-#: includes/elementor/widgets/heading-modern.php:907
-#: includes/elementor/widgets/heading-modern.php:1062
-#: includes/elementor/widgets/mailchimp.php:214
-#: includes/elementor/widgets/mailchimp.php:465
-#: includes/elementor/widgets/mailchimp.php:693
-#: includes/elementor/widgets/svg.php:167
-#: includes/elementor/widgets/testimonial.php:289
-#: includes/elementor/widgets/testimonial.php:872
-#: includes/elementor/widgets/theme-elements/logo.php:227
-#: includes/elementor/widgets/theme-elements/search.php:298
-#: includes/elementor/widgets/video.php:196
-#: includes/elements/before-after.php:113 includes/elements/image.php:107
-#: includes/elements/staff.php:122 includes/elements/video.php:78
-msgid "Width"
-msgstr "عرض"
 
 #: includes/elementor/widgets/button.php:52
 #: includes/elementor/widgets/button.php:105
@@ -6211,76 +6375,6 @@ msgstr "کد کوتاه یکی از فرم های تماس 7 خود را در ا
 #: includes/elements/contact-form.php:56
 msgid "Email address of message's recipient"
 msgstr "آدرس ایمیل دریافت کننده ی پیام ها"
-
-#: includes/elementor/widgets/contact-form.php:166
-msgid "All Inputs"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:175
-#: includes/elementor/widgets/contact-form.php:462
-#: includes/elementor/widgets/contact-form.php:938
-#: includes/elementor/widgets/contact-form.php:1183
-#: includes/elementor/widgets/contact-form.php:1468
-#: includes/elementor/widgets/contact-form.php:1505
-#: includes/elementor/widgets/contact-form.php:1542
-#: includes/elementor/widgets/mailchimp.php:192
-#: includes/elementor/widgets/mailchimp.php:421
-#: includes/elementor/widgets/mailchimp.php:454
-msgid "Typography"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:387
-#: includes/elementor/widgets/contact-form.php:678
-#: includes/elementor/widgets/contact-form.php:898
-#: includes/elementor/widgets/contact-form.php:1142
-#: includes/elementor/widgets/contact-form.php:1394
-#: includes/elementor/widgets/contact-form.php:1746
-#: includes/elementor/widgets/image.php:575
-#: includes/elementor/widgets/mailchimp.php:383
-#: includes/elementor/widgets/mailchimp.php:655
-#: includes/elementor/widgets/theme-elements/breadcrumbs.php:516
-#: includes/elementor/widgets/theme-elements/logo.php:365
-msgid "Transition Duration"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:410
-#: includes/elementor/widgets/contact-form.php:1417
-msgid "Focus"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:453
-msgid "Input Placeholder"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:490
-msgid "Text Inputs"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:710
-msgid "Email Inputs"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:929
-#: includes/elementor/widgets/theme-elements/shopping-cart.php:361
-msgid "Dropdown"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:1174
-msgid "Textarea"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:1459
-msgid "Textarea Placeholder"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:1496
-msgid "Labels"
-msgstr ""
-
-#: includes/elementor/widgets/contact-form.php:1533
-#, fuzzy
-msgid "Submit Button"
-msgstr "تایید"
 
 #: includes/elementor/widgets/custom-list.php:53
 msgid "Flexible List"
@@ -8636,9 +8730,7 @@ msgid "Padding for content wrapper"
 msgstr ""
 
 #: includes/elementor/widgets/recent-posts-grid-carousel.php:1675
-#: includes/elementor/widgets/text.php:628
-#: includes/elementor/widgets/text.php:1568
-msgid "Transition duration"
+msgid "Transition duration (ms)"
 msgstr ""
 
 #: includes/elementor/widgets/recent-posts-grid-carousel.php:1730
@@ -9238,6 +9330,11 @@ msgstr "رنگ شکلک"
 #: includes/elementor/widgets/text.php:603 includes/elements/text.php:483
 msgid "Icon background color"
 msgstr "رنگ پس زمینه شکلک"
+
+#: includes/elementor/widgets/text.php:628
+#: includes/elementor/widgets/text.php:1568
+msgid "Transition duration"
+msgstr ""
 
 #: includes/elementor/widgets/text.php:657 includes/elements/text.php:574
 #, fuzzy

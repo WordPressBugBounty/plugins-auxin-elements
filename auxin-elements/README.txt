@@ -7,7 +7,7 @@ Tags: phlox, elementor, auxin, averta, fullwidth
 Requires PHP: 7.0
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 2.17.15
+Stable tag: 2.17.16
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -153,6 +153,9 @@ Bugs can be reported in our [support forums](https://docs.phlox.pro).
 
 
 == Changelog ==
+
+= Version 2.17.16 / (09.05.2026) =
+- [Fix]: Addressed two low-severity security vulnerabilities (CVE-2025-69016, CVE-2026-4291)
 
 = Version 2.17.15 / (24.01.2026) =
 - [Fix]: An issue with choosing tag type in Elementor "modern heading" element fixed.

@@ -137,7 +137,7 @@ function auxin_get_accordion_widget_callback( $atts, $shortcode_content = null )
     // widget header ------------------------------
     $output  = $result['widget_header'];
     $output .= $result['widget_title'];
-    $output .= '<div class="widget-inner ' .$extra_classes . '" data-toggle="' . $type . '">';
+    $output .= '<div class="widget-inner ' .esc_attr( $extra_classes ) . '" data-toggle="' . esc_attr( $type ) . '">';
 
     // widget custom output -----------------------
 

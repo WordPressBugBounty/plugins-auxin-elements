@@ -85,5 +85,6 @@ include_once( 'elementor/class-auxin-elementor-core-elements.php' );
 
 // Load Compatiblity functionalities
 include_once( 'compatibility/wp-rocket/wp-rocket.php' );
+include_once( 'compatibility/wpforms/wpforms.php' );
 
 
