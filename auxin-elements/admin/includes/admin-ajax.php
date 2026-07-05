@@ -265,6 +265,10 @@ add_action( 'wp_ajax_auxin_dismissed_notice', 'auxin_dismissed_notice' );
  * @return html
  */
 function auxin_display_actvation_form(){
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_send_json_error( esc_html__( 'You do not have permission to perform this action.', 'auxin-elements' ) );
+    }
+
     if ( ! isset( $_GET['nonce'] ) || ! wp_verify_nonce( $_GET['nonce'], 'aux-activation-form' ) ) {
         // This nonce is not valid.
         wp_die( esc_html__( 'Security Token Error!', 'auxin-elements' ) );
@@ -496,7 +500,7 @@ add_action( 'wp_ajax_auxin_customizer_import', 'auxin_customizer_import' );
  * @return json
  */
 function auxin_template_control_importer() {
-    $template_type = sanitize_text_field( $_POST['template_type'] );
+    $template_type = isset( $_POST['template_type'] ) ? sanitize_text_field( wp_unslash( $_POST['template_type'] ) ) : '';
     if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'customizer-template-library-' .  $template_type ) ) {
         wp_send_json_error([
             'message' => __( 'Authorization failed!', 'auxin-elements')

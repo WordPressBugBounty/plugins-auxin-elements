@@ -2838,7 +2838,6 @@ function auxin_load_template_function_for_page_builders(){
     }
 }
 add_action('save_post', 'auxin_load_template_function_for_page_builders', 7, 1);
-add_action('wp_ajax_wpseo_filter_shortcodes', 'auxin_load_template_function_for_page_builders', 7, 1);
 
 /*-----------------------------------------------------------------------------------*/
 /*  Function For Let the user To use custom page for Maintenance and Comingsoon

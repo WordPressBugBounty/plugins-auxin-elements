@@ -167,12 +167,15 @@ class Gmap extends Widget_Base {
             )
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'height',
             array(
                 'label'        => __('Height','auxin-elements' ),
-                'type'         => Controls_Manager::TEXT,
-                'default'      => '700'
+                'type'         => Controls_Manager::NUMBER,
+                'default'      => '700',
+                'selectors'    => [
+                    '{{WRAPPER}} .aux-map-wrapper' => 'height: {{SIZE}}px'
+                ]
             )
         );
 

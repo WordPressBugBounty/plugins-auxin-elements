@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auxin Essential Elements\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-05-09 07:40:30+00:00\n"
+"POT-Creation-Date: 2026-07-05 13:01:58+00:00\n"
 "PO-Revision-Date: 2016-11-09 12:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,13 +26,13 @@ msgid "Data cannot be delivered, please try again."
 msgstr "داده ها قابل تحویل نیستند، لطفا دوباره تلاش کنید."
 
 #: admin/includes/admin-ajax.php:18 admin/includes/admin-ajax.php:83
-#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:502
+#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:506
 msgid "Authorization failed!"
 msgstr "احراز هویت با خطا مواجه شد!"
 
 #: admin/includes/admin-ajax.php:22 admin/includes/admin-ajax.php:87
-#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:430
-#: admin/includes/admin-ajax.php:508
+#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:434
+#: admin/includes/admin-ajax.php:512
 #: includes/classes/class-auxels-envato-elements.php:89
 #: includes/classes/class-auxin-demo-importer.php:210
 #: includes/classes/class-auxin-demo-importer.php:246
@@ -48,8 +48,8 @@ msgid "An error occurred. Feedback could not be delivered, please try again."
 msgstr "خطایی رخ داده است. بازخورد قابل تحویل نیست، لطفا دوباره تلاش کنید."
 
 #: admin/includes/admin-ajax.php:128 admin/includes/admin-ajax.php:254
-#: admin/includes/admin-ajax.php:320 admin/includes/admin-ajax.php:355
-#: admin/includes/admin-ajax.php:381 admin/includes/admin-ajax.php:426
+#: admin/includes/admin-ajax.php:324 admin/includes/admin-ajax.php:359
+#: admin/includes/admin-ajax.php:385 admin/includes/admin-ajax.php:430
 msgid "Token Error."
 msgstr ""
 
@@ -65,41 +65,45 @@ msgstr ""
 msgid "It's OK."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:270
+#: admin/includes/admin-ajax.php:269
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: admin/includes/admin-ajax.php:274
 #: includes/classes/class-auxin-welcome.php:1215
 #: includes/classes/class-auxin-welcome.php:1220
 #: includes/classes/class-auxin-welcome.php:1388
 msgid "Security Token Error!"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:277
+#: admin/includes/admin-ajax.php:281
 msgid "License Activation"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:278
+#: admin/includes/admin-ajax.php:282
 msgid ""
 "Please activate your license to get automatic updates, premium support, and "
 "unlimited access to the template library and demo importer."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:281
+#: admin/includes/admin-ajax.php:285
 #, fuzzy
 msgid "E-mail address"
 msgstr "آدرس ایمیل جعبه تماس"
 
-#: admin/includes/admin-ajax.php:286
+#: admin/includes/admin-ajax.php:290
 msgid "Purchase code"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:294
+#: admin/includes/admin-ajax.php:298
 msgid "Activate"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:313
+#: admin/includes/admin-ajax.php:317
 msgid "Persmission Error."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:314 admin/includes/admin-ajax.php:332
+#: admin/includes/admin-ajax.php:318 admin/includes/admin-ajax.php:336
 #: includes/classes/class-auxin-demo-importer.php:115
 #: includes/classes/class-auxin-demo-importer.php:158
 #: includes/classes/class-auxin-demo-importer.php:193
@@ -109,35 +113,35 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:321 admin/includes/admin-ajax.php:336
+#: admin/includes/admin-ajax.php:325 admin/includes/admin-ajax.php:340
 #: includes/classes/class-auxin-demo-importer.php:191
 msgid "Retry"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:363 admin/includes/admin-ajax.php:385
+#: admin/includes/admin-ajax.php:367 admin/includes/admin-ajax.php:389
 #: includes/classes/class-auxin-welcome.php:1225
 #: includes/classes/class-auxin-welcome.php:1501
 msgid "Permission Error."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:401
+#: admin/includes/admin-ajax.php:405
 msgid "No data found!"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:435
+#: admin/includes/admin-ajax.php:439
 #, fuzzy
 msgid "Please upload a valid file."
 msgstr "لطفا فایل ویدیو را بارگذاری کنید."
 
-#: admin/includes/admin-ajax.php:450
+#: admin/includes/admin-ajax.php:454
 msgid "Invalid or Empty Data."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:487
+#: admin/includes/admin-ajax.php:491
 msgid "Successfully Imported."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:515
+#: admin/includes/admin-ajax.php:519
 msgid "Invalid template ID."
 msgstr ""
 
@@ -1994,7 +1998,7 @@ msgid "Importing Media"
 msgstr ""
 
 #: includes/classes/class-auxin-demo-importer.php:302
-#: includes/classes/class-auxin-demo-importer.php:1419
+#: includes/classes/class-auxin-demo-importer.php:1432
 msgid "Importing Users"
 msgstr ""
 
@@ -2025,11 +2029,11 @@ msgstr ""
 msgid "Importing Sliders"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1507
+#: includes/classes/class-auxin-demo-importer.php:1520
 msgid "Preparing Site ..."
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1567
+#: includes/classes/class-auxin-demo-importer.php:1580
 msgid "All steps are successful"
 msgstr ""
 
@@ -5224,7 +5228,7 @@ msgstr "وسط"
 
 #: includes/elementor/widgets/accordion.php:363
 #: includes/elementor/widgets/contact-box.php:327
-#: includes/elementor/widgets/gmap.php:208
+#: includes/elementor/widgets/gmap.php:211
 #: includes/elementor/widgets/tabs.php:202
 #: includes/elementor/widgets/theme-elements/modern-search.php:592
 #: includes/elements/contact-box.php:276 includes/elements/gmap.php:169
@@ -5275,8 +5279,8 @@ msgstr "فایل صوتی را به صورت خودکار پخش کن."
 #: includes/elementor/widgets/gallery.php:232
 #: includes/elementor/widgets/gallery.php:243
 #: includes/elementor/widgets/gallery.php:276
-#: includes/elementor/widgets/gmap.php:198
-#: includes/elementor/widgets/gmap.php:219
+#: includes/elementor/widgets/gmap.php:201
+#: includes/elementor/widgets/gmap.php:222
 #: includes/elementor/widgets/heading-modern.php:198
 #: includes/elementor/widgets/image.php:160
 #: includes/elementor/widgets/image.php:193
@@ -5421,8 +5425,8 @@ msgstr ""
 #: includes/elementor/widgets/gallery.php:233
 #: includes/elementor/widgets/gallery.php:244
 #: includes/elementor/widgets/gallery.php:277
-#: includes/elementor/widgets/gmap.php:199
-#: includes/elementor/widgets/gmap.php:220
+#: includes/elementor/widgets/gmap.php:202
+#: includes/elementor/widgets/gmap.php:223
 #: includes/elementor/widgets/heading-modern.php:199
 #: includes/elementor/widgets/image.php:161
 #: includes/elementor/widgets/image.php:194
@@ -6279,7 +6283,7 @@ msgid "SATELLITE"
 msgstr "ماهواره"
 
 #: includes/elementor/widgets/contact-box.php:288
-#: includes/elementor/widgets/gmap.php:182
+#: includes/elementor/widgets/gmap.php:185
 #: includes/elements/contact-box.php:213 includes/elements/gmap.php:109
 msgid "Map style"
 msgstr "ظاهر نقشه"
@@ -6294,7 +6298,7 @@ msgstr ""
 "می توانید سبک های پیش ساخته را در اینجا پیدا کنید:"
 
 #: includes/elementor/widgets/contact-box.php:289
-#: includes/elementor/widgets/gmap.php:184
+#: includes/elementor/widgets/gmap.php:187
 #: includes/elements/contact-box.php:215 includes/elements/gmap.php:111
 msgid "this website."
 msgstr "این وب سایت."
@@ -6312,7 +6316,7 @@ msgid "Marker popup text, leave it empty if you don't need it."
 msgstr "متن پنجره نشانگر، اگر به ان نیاز ندارید این بخش را خالی بگذارید."
 
 #: includes/elementor/widgets/contact-box.php:312
-#: includes/elementor/widgets/gmap.php:195
+#: includes/elementor/widgets/gmap.php:198
 #: includes/elementor/widgets/recent-posts-grid-carousel.php:241
 #: includes/elementor/widgets/recent-posts-tiles-carousel.php:211
 #: includes/elements/contact-box.php:258 includes/elements/gmap.php:154
@@ -6332,7 +6336,7 @@ msgid "The initial resolution at which to display the map, between 1 to 20."
 msgstr "رزولوشن اولیه برای نمایش نقشه، بین 1 تا 20."
 
 #: includes/elementor/widgets/contact-box.php:352
-#: includes/elementor/widgets/gmap.php:217
+#: includes/elementor/widgets/gmap.php:220
 #: includes/elements/contact-box.php:293 includes/elements/gmap.php:183
 msgid "Zoom with mouse wheel"
 msgstr "بزرگنمایی با چرخ ماوس"
@@ -6877,7 +6881,7 @@ msgstr ""
 msgid "Satelite"
 msgstr ""
 
-#: includes/elementor/widgets/gmap.php:183 includes/elements/gmap.php:110
+#: includes/elementor/widgets/gmap.php:186 includes/elements/gmap.php:110
 msgid ""
 "This feild allow you to customize the presentation of the standard Google "
 "base maps. You can find many preset styles in "
@@ -6885,15 +6889,15 @@ msgstr ""
 "این فیلد به شما اجازه می دهد نحوه نمایش پایه ای نقشه گوگل را تغییر دهید. شما "
 "می توانید سبک های پیش ساخته را در اینجا پیدا کنید:"
 
-#: includes/elementor/widgets/gmap.php:196 includes/elements/gmap.php:155
+#: includes/elementor/widgets/gmap.php:199 includes/elements/gmap.php:155
 msgid "Show navigation control on map."
 msgstr "نمایش کنترل های ناوبری در نقشه."
 
-#: includes/elementor/widgets/gmap.php:260
+#: includes/elementor/widgets/gmap.php:263
 msgid "Google Maps API Key Is Missing."
 msgstr ""
 
-#: includes/elementor/widgets/gmap.php:263
+#: includes/elementor/widgets/gmap.php:266
 msgid ""
 "In order to use google maps on your website, you have to create an api key "
 "and insert it in customizer \"Google Maps API Key\" field."
@@ -12929,12 +12933,12 @@ msgstr "تنظیمات نوشته صوتی"
 msgid "Page %s"
 msgstr "برگه ها"
 
-#: includes/general-hooks.php:3195
+#: includes/general-hooks.php:3194
 #, fuzzy
 msgid "current "
 msgstr "صفحه جاری"
 
-#: includes/general-hooks.php:3225
+#: includes/general-hooks.php:3224
 msgid "Edit Header & Footer"
 msgstr ""
 

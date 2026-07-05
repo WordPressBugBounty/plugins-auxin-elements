@@ -1180,6 +1180,19 @@ class Auxin_Demo_Importer {
                     }
                 }
 
+                // Change wpform's id
+                preg_match_all( '/form_id":"\d*/', $elementor_data, $form_ids, PREG_SET_ORDER );
+                if ( ! empty( $form_ids ) ) {
+                    foreach ( $form_ids as $key => $form_id ) {
+                        $old_id         = str_replace( 'form_id":"', '', $form_id[0] );
+                        if ( ! is_numeric( $old_id ) ) {
+                            continue;
+                        }
+                        $new_form   = 'form_id":"'. $this->get_attachment_id( 'auxin_import_post', $old_id );
+                        $elementor_data = str_replace( $form_id[0], $new_form, $elementor_data );
+                    }
+                }
+
                 // Change contact form 7 old id
                 preg_match_all( '/contact-form-7 id=\\\"(\d*)/', $elementor_data, $contact_forms, PREG_SET_ORDER );
                 if ( ! empty( $contact_forms ) ) {
