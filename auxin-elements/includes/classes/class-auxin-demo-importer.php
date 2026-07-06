@@ -846,6 +846,10 @@ class Auxin_Demo_Importer {
                 continue;
             }
 
+            if ( $post['post_type'] == 'wpforms') {
+                $content = wp_slash( $content );
+            }
+
             $post_id = wp_insert_post(
                 array(
                     'post_title'        => sanitize_text_field( $post['post_title'] ),
