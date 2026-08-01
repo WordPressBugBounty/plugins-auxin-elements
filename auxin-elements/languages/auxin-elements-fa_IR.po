@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auxin Essential Elements\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-07-06 08:45:32+00:00\n"
+"POT-Creation-Date: 2026-08-01 13:48:37+00:00\n"
 "PO-Revision-Date: 2016-11-09 12:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -35,7 +35,7 @@ msgstr "احراز هویت با خطا مواجه شد!"
 #: admin/includes/admin-ajax.php:512
 #: includes/classes/class-auxels-envato-elements.php:89
 #: includes/classes/class-auxin-demo-importer.php:210
-#: includes/classes/class-auxin-demo-importer.php:246
+#: includes/classes/class-auxin-demo-importer.php:245
 msgid "Access Denied: You don't have the required permissions!"
 msgstr ""
 
@@ -1981,59 +1981,71 @@ msgstr ""
 msgid "Invalid Inputs."
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:250
+#: includes/classes/class-auxin-demo-importer.php:249
 msgid "Step Failed!"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:257
+#: includes/classes/class-auxin-demo-importer.php:256
 msgid "Error in getting data!"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:280
+#: includes/classes/class-auxin-demo-importer.php:266
+#: includes/classes/class-auxin-demo-importer.php:295
+#: includes/classes/class-auxin-demo-importer.php:309
+#: includes/classes/class-auxin-demo-importer.php:336
+#: includes/classes/class-auxin-demo-importer.php:376
+#: includes/classes/class-auxin-demo-importer.php:385
+#: includes/classes/class-auxin-demo-importer.php:406
+#: includes/classes/class-auxin-demo-importer.php:416
+#: includes/classes/class-auxin-demo-importer.php:428
+msgid "Invalid nonce token!"
+msgstr ""
+
+#: includes/classes/class-auxin-demo-importer.php:283
 msgid "Downloading Medias"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:286
+#: includes/classes/class-auxin-demo-importer.php:291
 msgid "Importing Media"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:302
-#: includes/classes/class-auxin-demo-importer.php:1436
+#: includes/classes/class-auxin-demo-importer.php:314
+#: includes/classes/class-auxin-demo-importer.php:1485
 msgid "Importing Users"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:313
-#: includes/classes/class-auxin-demo-importer.php:341
+#: includes/classes/class-auxin-demo-importer.php:326
+#: includes/classes/class-auxin-demo-importer.php:357
 msgid "Importing Contents"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:353
+#: includes/classes/class-auxin-demo-importer.php:370
 #, fuzzy
 msgid "Importing Options"
 msgstr "تنظیمات طراحی"
 
-#: includes/classes/class-auxin-demo-importer.php:370
-#: includes/classes/class-auxin-demo-importer.php:603
+#: includes/classes/class-auxin-demo-importer.php:393
+#: includes/classes/class-auxin-demo-importer.php:637
 msgid "Importing Menus"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:376
+#: includes/classes/class-auxin-demo-importer.php:400
 msgid "Importing Widgets"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:461
+#: includes/classes/class-auxin-demo-importer.php:494
 msgid "Retrieve Body Fails"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:678
+#: includes/classes/class-auxin-demo-importer.php:713
 msgid "Importing Sliders"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1524
+#: includes/classes/class-auxin-demo-importer.php:1574
 msgid "Preparing Site ..."
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1584
+#: includes/classes/class-auxin-demo-importer.php:1634
 msgid "All steps are successful"
 msgstr ""
 

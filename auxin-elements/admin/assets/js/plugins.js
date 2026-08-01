@@ -1,4 +1,4 @@
-/*! Phlox Core Plugin - v2.17.21 (2026-07)
+/*! Phlox Core Plugin - v2.17.22 (2026-08)
  *  All required javascript plugins for admin 
  *  http://phlox.pro/
  *  Place any jQuery/helper plugins in here, instead of separate, slower script files!
@@ -2117,6 +2117,7 @@ if( typeof Object.create !== 'function' ){ Object.create = function (obj){ funct
                     if (response !== null && response.success) {
                         this._demoImport({
                             target: $buttonElement[0],
+                            nonce: response.nonce,
                             step: "download",
                             message: "Downloading Media ...",
                             index: null
@@ -2140,6 +2141,7 @@ if( typeof Object.create !== 'function' ){ Object.create = function (obj){ funct
             // Set variable
             this._ajaxData = {
                 action: "import_step",
+                nonce: data.nonce,
                 step: data.step,
                 index: data.index
             };
@@ -2154,6 +2156,7 @@ if( typeof Object.create !== 'function' ){ Object.create = function (obj){ funct
                                 target: data.target,
                                 step: response.data.next,
                                 message: response.data.message,
+                                nonce: response.data.nonce,
                                 index: response.data.hasOwnProperty("index")
                                     ? response.data.index
                                     : ""

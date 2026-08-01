@@ -233,7 +233,7 @@ class Auxin_Demo_Importer {
 
             flush_rewrite_rules();
 
-            wp_send_json_success();
+            wp_send_json([ 'success' => true, 'nonce' => wp_create_nonce( 'aux-importing-demo-download-step' ) ]);
         }
 
         wp_send_json_error(  array( 'message' => $data['data'] ) );
@@ -241,7 +241,6 @@ class Auxin_Demo_Importer {
     }
 
     public function import_step() {
-
         if ( ! current_user_can('manage_options') ) {
             wp_send_json_error( array( 'message' => __( "Access Denied: You don't have the required permissions!", 'auxin-elements' ) ) );
         }
@@ -263,6 +262,10 @@ class Auxin_Demo_Importer {
             case 'download':
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['media'] ) && 'on' === $options['media'] ) ) ) {
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-demo-download-step' ) ) {
+                        wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                    }
+
                     // change to current node
                     $index++;
                     if( is_array( $data['attachments'] ) && $posts_number = count( $data['attachments'] ) ){
@@ -277,15 +280,20 @@ class Auxin_Demo_Importer {
                             $this->download( array_slice( $requests, $index - 1, 1 ) );
 
                             if( $index < $posts_number ){
-                                wp_send_json_success( array( 'message' => __( 'Downloading Medias', 'auxin-elements' ). ' ' . $index . '/' . $posts_number, 'next' => 'download', 'index' => $index ) );
+                                wp_send_json_success( array( 'message' => __( 'Downloading Medias', 'auxin-elements' ). ' ' . $index . '/' . $posts_number, 'next' => 'download', 'index' => $index, 'nonce' => $_POST['nonce'] ) );
                             }
                         }
                     }
 
                 }
-                wp_send_json_success( array( 'step' => 'download', 'next' => 'media', 'message' => __( 'Importing Media', 'auxin-elements' ) ) );
+
+                $nonce = wp_create_nonce( 'aux-importing-media' );
+                wp_send_json_success( array( 'step' => 'download', 'next' => 'media', 'message' => __( 'Importing Media', 'auxin-elements' ), 'nonce' => $nonce ) );
 
             case 'media':
+                if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-media' ) ) {
+                    wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                }
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['media'] ) && 'on' === $options['media'] ) ) ) {
                     return $this->import_media( $data['attachments'] );
@@ -297,9 +305,13 @@ class Auxin_Demo_Importer {
                     $index++;
                     if( is_array( $data['users'] ) && $users_number = count( $data['users'] ) ){
                         if( $index <= $users_number ){
+                            if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-users' ) ) {
+                                wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                            }
+
                             $this->import_users( array_slice( $data['users'], $index - 1, 1 ) );
                             if( $index < $users_number ){
-                                wp_send_json_success( array( 'message' => __( 'Importing Users', 'auxin-elements' ). ' '. $index . '/' . $users_number, 'next' => 'users', 'index' => $index ) );
+                                wp_send_json_success( array( 'message' => __( 'Importing Users', 'auxin-elements' ). ' '. $index . '/' . $users_number, 'next' => 'users', 'index' => $index, 'nonce' => $_POST['nonce'] ) );
                             }
                         }
                     }
@@ -310,7 +322,8 @@ class Auxin_Demo_Importer {
                     wp_trash_post( 1 );
                 }
 
-                wp_send_json_success( array( 'step' => 'users', 'next' => 'content', 'message' => __( 'Importing Contents', 'auxin-elements' ) ) );
+                $nonce = wp_create_nonce( 'aux-importing-content' );
+                wp_send_json_success( array( 'step' => 'users', 'next' => 'content', 'message' => __( 'Importing Contents', 'auxin-elements' ), 'nonce' => $nonce ) ); 
 
             case 'content':
                 if ( 'complete' === $options['import']
@@ -319,6 +332,9 @@ class Auxin_Demo_Importer {
                     // change to current node
                     $index++;
                     if( is_array( $data['contents'] ) && $posts_number = count( $data['contents'] ) ){
+                        if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-content' ) ) {
+                            wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                        }
                         if( $index <= $posts_number ){
                             // Define the desired order to import posts
 							$priority = [
@@ -338,7 +354,7 @@ class Auxin_Demo_Importer {
 
                             $this->import_posts( array_slice( $data['contents'], $index - 1, 1 ) );
                             if( $index < $posts_number ){
-                                wp_send_json_success( array( 'message' => __( 'Importing Contents', 'auxin-elements' ). ' '. $index . '/' . $posts_number, 'next' => 'content', 'index' => $index ) );
+                                wp_send_json_success( array( 'message' => __( 'Importing Contents', 'auxin-elements' ). ' '. $index . '/' . $posts_number, 'next' => 'content', 'index' => $index, 'nonce' => $_POST['nonce'] ) );
                             }
                         }
                     }
@@ -350,34 +366,45 @@ class Auxin_Demo_Importer {
                 if ( ! empty( $data['terms-meta'] ) ) {
                     $this->add_demo_terms_meta( $data['terms-meta'] );
                 }
-                wp_send_json_success( array( 'step' => 'content', 'message' => __( 'Importing Options', 'auxin-elements' ), 'next' => 'auxin_options' ) );
+                $nonce = wp_create_nonce( 'aux-importing-auxin_options' );
+                wp_send_json_success( array( 'step' => 'content', 'message' => __( 'Importing Options', 'auxin-elements' ), 'next' => 'auxin_options', 'nonce' => $nonce ) );
 
             case 'auxin_options':
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['options'] ) && 'on' === $options['options'] ) ) ) {
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-auxin_options' ) ) {
+                        wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                    }
                     return $this->import_options( $data['options'] );
                 }
 
             case 'menus':
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['menus'] ) && 'on' === $options['menus'] ) ) ) {
-
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-menus' ) ) {
+                        wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                    }
                     $index++;
                     if( is_array( $data['menus'] ) && $menu_number = count( $data['menus'] ) ){
                         if( $index <= $menu_number ){
                             $this->import_menus( array_slice( $data['menus'], $index - 1, 1 ) );
                             if( $index < $menu_number ){
-                                wp_send_json_success( array( 'message' => __( 'Importing Menus', 'auxin-elements' ). ' '. $index . '/' . $menu_number, 'next' => 'menus', 'index' => $index ) );
+                                $nonce = wp_create_nonce( 'aux-importing-menus' );
+                                wp_send_json_success( array( 'message' => __( 'Importing Menus', 'auxin-elements' ). ' '. $index . '/' . $menu_number, 'next' => 'menus', 'index' => $index, 'nonce' => $_POST['nonce'] ) );
                             }
                         }
                     }
 
                 }
-                wp_send_json_success( array( 'step' => 'menus', 'next' => 'widgets', 'message' => __( 'Importing Widgets', 'auxin-elements' ) ) );
+                $nonce = wp_create_nonce( 'aux-importing-widgets' );
+                wp_send_json_success( array( 'step' => 'menus', 'next' => 'widgets', 'message' => __( 'Importing Widgets', 'auxin-elements' ), 'nonce' => $nonce ) );
 
             case 'widgets':
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['widgets'] ) && 'on' === $options['widgets'] ) ) ) {
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-widgets' ) ) {
+                        wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                    }
                     return $this->import_widgets( $data['widgets'] );
                 }
 
@@ -385,6 +412,9 @@ class Auxin_Demo_Importer {
                 if ( 'complete' === $options['import']
                 || ( 'custom' === $options['import'] && ( isset( $options['masterslider'] ) && 'on' === $options['masterslider'] ) )
                 && ( isset( $data['sliders'] ) || isset( $data['depicter_sliders'] ) ) ) {
+                    if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-masterslider' ) ) {
+                        wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                    }
                     $sliders = [
                         'master' => !empty( $data['sliders'] ) ? $data['sliders'] : '',
                         'depicter' => !empty( $data['depicter_sliders'] ) ? $data['depicter_sliders'] : '',
@@ -394,6 +424,9 @@ class Auxin_Demo_Importer {
                 }
 
             case 'prepare':
+                if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'aux-importing-prepare' ) ) {
+                    wp_send_json_error( array( 'message' => __( 'Invalid nonce token!', 'auxin-elements' ) ) );
+                }
                 return $this->prepare_site();
         }
     }
@@ -600,7 +633,8 @@ class Auxin_Demo_Importer {
         // Stores JavaScript content in custom js file
         auxin_save_custom_js();
 
-        wp_send_json_success( array( 'step' => 'options', 'next' => 'menus', 'message' => __( 'Importing Menus', 'auxin-elements' ) ) );
+        $nonce = wp_create_nonce( 'aux-importing-menus' );
+        wp_send_json_success( array( 'step' => 'options', 'next' => 'menus', 'message' => __( 'Importing Menus', 'auxin-elements' ), 'nonce' => $nonce ) );
     }
 
     /**
@@ -675,7 +709,8 @@ class Auxin_Demo_Importer {
             update_option( $data_key, $data_values );
         }
 
-        wp_send_json_success( array( 'step' => 'widgets', 'next' => 'masterslider', 'message' => __( 'Importing Sliders', 'auxin-elements' ) ) );
+        $nonce = wp_create_nonce( 'aux-importing-masterslider' );
+        wp_send_json_success( array( 'step' => 'widgets', 'next' => 'masterslider', 'message' => __( 'Importing Sliders', 'auxin-elements' ), 'nonce' => $nonce ) );
 
     }
 
@@ -1131,7 +1166,8 @@ class Auxin_Demo_Importer {
                 'product',
                 'product_variation',
                 'elementor_library',
-                'news'
+                'news',
+                'wpforms'
             ),
             'posts_per_page' => -1
         );
@@ -1166,6 +1202,18 @@ class Auxin_Demo_Importer {
                             'post_parent' => $convertedParentID
                         ]);
                     }
+                } elseif ( get_post_type( $post_ID ) == 'wpforms' ) {
+                    $wpformContent = get_the_content();
+                    $formData = json_decode( $wpformContent, true );
+                    if (!empty($formData)) {
+                        $formData['id'] = "$post_ID";
+                        $content = wp_json_encode( $formData );
+                        wp_update_post([
+                            'ID' => $post_ID,
+                            'post_content' => wp_slash( $content )
+                        ]);
+                    }
+                    continue;
                 }
 
                 $elementor_data = get_post_meta( $post_ID , '_elementor_data', true );
@@ -1433,7 +1481,8 @@ class Auxin_Demo_Importer {
         }
         delete_option('auxin_demo_media_args');
 
-        wp_send_json_success( array( 'step' => 'media', 'next' => 'users', 'message' => __( 'Importing Users', 'auxin-elements' ) ) );
+        $nonce = wp_create_nonce( 'aux-importing-users' );
+        wp_send_json_success( array( 'step' => 'media', 'next' => 'users', 'message' => __( 'Importing Users', 'auxin-elements' ), 'nonce' => $nonce ) );
     }
 
     public function import_users( array $args ) {
@@ -1521,7 +1570,8 @@ class Auxin_Demo_Importer {
             \Depicter::cache('base')->delete('_conditional_document_ids');
         }
 
-        wp_send_json_success( array( 'step' => 'masterslider', 'next' => 'prepare', 'message' => __( 'Preparing Site ...', 'auxin-elements' ) ) );
+        $nonce = wp_create_nonce( 'aux-importing-prepare' );
+        wp_send_json_success( array( 'step' => 'masterslider', 'next' => 'prepare', 'message' => __( 'Preparing Site ...', 'auxin-elements' ), 'nonce' => $nonce ) );
 
     }
 

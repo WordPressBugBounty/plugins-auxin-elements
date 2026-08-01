@@ -2954,7 +2954,7 @@ function auxin_remove_default_woocommerce_product_title() {
 
 function auxin_woocommerce_template_loop_product_title() {
     global $product;
-    $dom = '<a href="' . esc_url( get_permalink( $product->get_id() ) ) . '"><h2 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2></a>'; 
+    $dom = '<a href="' . esc_url( get_permalink( $product->get_id() ) ) . '"><h2 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2></a>';
     echo apply_filters( 'auxin_woocommerce_template_loop_product_title', $dom );
 }
 
@@ -3233,7 +3233,9 @@ function auxin_add_admin_bar_header_footer_edit_link() {
 }
 
 function auxels_add_svg_upload_permission( $mimes ){
-    $mimes['svg'] = 'image/svg+xml';
+    if ( current_user_can( 'manage_options' ) || current_user_can( 'unfiltered_html' ) ) {
+        $mimes['svg'] = 'image/svg+xml';
+    }
     return $mimes;
 }
 add_filter( 'upload_mimes', 'auxels_add_svg_upload_permission' );
@@ -3262,7 +3264,7 @@ add_filter( 'woocommerce_post_class', 'auxels_add_product_item_classes', 1, 1 );
  * @return string $button
  */
 function auxin_modify_ti_wishlist_button( $button ) {
-    
+
     $button = str_replace( 'tinvwl_add_to_wishlist_button', 'tinvwl_add_to_wishlist_button auxshp-wishlist ' , $button );
     $button = str_replace( 'tinvwl_add_to_wishlist-text', 'tinvwl_add_to_wishlist-text auxshp-wishlist-text ', $button );
     if ( is_singular( 'product' ) ) {
@@ -3276,7 +3278,7 @@ function auxin_modify_ti_wishlist_button( $button ) {
 add_filter( 'tinvwl_wishlist_button', 'auxin_modify_ti_wishlist_button', 1, 1 );
 
 /*-----------------------------------------------------------------------------------*/
-/*  Injects Custom css for login page 
+/*  Injects Custom css for login page
 /*-----------------------------------------------------------------------------------*/
 
 function auxels_add_login_style_to_head() {
@@ -3284,7 +3286,7 @@ function auxels_add_login_style_to_head() {
     if ( !empty( $inline_css ) ) {
         wp_add_inline_style( 'login', $inline_css );
     }
-    
+
 }
 add_action( 'login_enqueue_scripts','auxels_add_login_style_to_head' );
 
@@ -3297,7 +3299,7 @@ function auxels_disable_upload_sizes( $sizes, $metadata ) {
     // Get filetype data.
     $filetype = wp_check_filetype($metadata['file']);
 
-    // Check if is gif. 
+    // Check if is gif.
     if($filetype['type'] == 'image/gif') {
         // Unset sizes if file is gif.
         $sizes = array();
@@ -3305,5 +3307,5 @@ function auxels_disable_upload_sizes( $sizes, $metadata ) {
 
     // Return sizes you want to create from image (None if image is gif.)
     return $sizes;
-}   
-add_filter('intermediate_image_sizes_advanced', 'auxels_disable_upload_sizes', 10, 2); 
+}
+add_filter('intermediate_image_sizes_advanced', 'auxels_disable_upload_sizes', 10, 2);
