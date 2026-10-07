@@ -584,7 +584,7 @@ function auxin_widget_the_recent_products_callback( $atts, $shortcode_content = 
                 ?>
                 <div <?php wc_product_class( $item_class . ' post-'. $post->ID, $post->ID );?>>
                 <?php
-                include auxin_get_template_file( $template_part_file, '', $extra_template_path );
+                include auxin_get_template_file( $template_part_file, '', auxin_sanitize_template_path( $extra_template_path ) );
                 echo    '</div>';
             }
 

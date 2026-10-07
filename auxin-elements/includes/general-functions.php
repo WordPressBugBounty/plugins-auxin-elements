@@ -1430,7 +1430,7 @@ function auxin_get_widget_scafold( $atts, $default_atts, $shortcode_content = ''
             $before_widget
         );
     } elseif ( !empty($result['parsed_atts']['custom_el_id']) ){
-        $result['widget_header'] .= sprintf('<section id="%s" class="%s" style="%s" %s>', $result['parsed_atts']['custom_el_id'], $_widget_classes, $_widget_styles, $_widget_attrs );
+        $result['widget_header'] .= sprintf('<section id="%s" class="%s" style="%s" %s>', esc_attr( $result['parsed_atts']['custom_el_id'] ), $_widget_classes, $_widget_styles, $_widget_attrs );
     } else {
         $result['widget_header'] .= sprintf('<section class="%s" style="%s" %s>', $_widget_classes, $_widget_styles, $_widget_attrs );
     }
@@ -1438,9 +1438,9 @@ function auxin_get_widget_scafold( $atts, $default_atts, $shortcode_content = ''
     // Generate the title for widget or shortcode element
     if( ! empty( $result['parsed_atts']['title'] ) ){
         if( $before_title ){
-            $result['widget_title'] .= $before_title . $result['parsed_atts']['title'] . $after_title;
+            $result['widget_title'] .= $before_title . wp_kses_post( $result['parsed_atts']['title'] ) . $after_title;
         } elseif( ! empty( $result['parsed_atts']['title'] ) ){
-            $result['widget_title'] .= '<h3 class="widget-title">'. $result['parsed_atts']['title'] .'</h3>';
+            $result['widget_title'] .= '<h3 class="widget-title">' . wp_kses_post( $result['parsed_atts']['title'] ) . '</h3>';
         }
     }
 
@@ -2398,7 +2398,7 @@ function auxin_get_taxonomies( $args = [], $output = 'names', $operator = 'and' 
 function auxin_search_page_results($post_type = 'post',$args = array()) {
     switch ($post_type) {
         case 'product':
-            
+
             if ( class_exists('AUXSHP') ) {
                 $image_aspect_ratio = auxin_get_option( 'product_index_thumb_ratio', '1.33' );
                 $args['image_aspect_ratio'] = $image_aspect_ratio == 'custom' ? (float) auxin_get_option( 'product_index_thumb_ratio_custom', '1' ) : $image_aspect_ratio;
@@ -2406,7 +2406,7 @@ function auxin_search_page_results($post_type = 'post',$args = array()) {
                 $sizes = wc_get_image_size( 'woocommerce_thumbnail' );
                 $args['image_aspect_ratio'] = $sizes['width']/$sizes['height'];
             }
-            
+
             echo auxin_widget_the_recent_products_callback($args);
             break;
 
@@ -2560,8 +2560,84 @@ function auxin_sanitize_input( $input ) {
             $input = sanitize_text_field( $input );
         }
     }
-    
+
     return $input;
+}
+
+/**
+ * Validates an "extra template path" before it is used for template inclusion.
+ *
+ * Only directories that live inside a set of trusted base directories (this
+ * plugin, the active theme and its parent theme) are allowed.
+ *
+ * @param string $path Untrusted directory path.
+ * @return string Safe absolute directory path, or '' if not allowed.
+ */
+function auxin_sanitize_template_path( $path ) {
+    // Empty is safe: callers fall back to the theme template lookup.
+    if ( empty( $path ) || ! is_string( $path ) ) {
+        return '';
+    }
+
+    // Reject null bytes and any PHP/remote stream wrapper (e.g. phar://, http://).
+    if ( strpos( $path, "\0" ) !== false || preg_match( '#^[a-zA-Z][a-zA-Z0-9+.\-]*://#', $path ) ) {
+        return '';
+    }
+
+    // Reject traversal sequences before touching the filesystem.
+    if ( false !== strpos( $path, '..' ) ) {
+        return '';
+    }
+
+    // Canonicalize to an absolute, real path.
+    $real = realpath( $path );
+    if ( false === $real || ! is_dir( $real ) ) {
+        return '';
+    }
+    $real = wp_normalize_path( $real );
+
+    // Allow-list of trusted base directories: WordPress code locations that an
+    // administrator installs, namely the plugins directory (this plugin and the
+    // sibling auxin-portfolio / auxin-shop / auxin-the-news / auxin-pro plugins,
+    // plus WooCommerce), must-use plugins, and the active theme and its parent.
+    $candidates = array();
+    if ( defined( 'WP_PLUGIN_DIR' ) ) {
+        $candidates[] = WP_PLUGIN_DIR;
+    }
+    if ( defined( 'WPMU_PLUGIN_DIR' ) ) {
+        $candidates[] = WPMU_PLUGIN_DIR;
+    }
+    if ( defined( 'AUXELS_DIR' ) ) {
+        $candidates[] = AUXELS_DIR; // fallback if WP_PLUGIN_DIR is undefined
+    }
+    if ( function_exists( 'get_stylesheet_directory' ) ) {
+        $candidates[] = get_stylesheet_directory();
+    }
+    if ( function_exists( 'get_template_directory' ) ) {
+        $candidates[] = get_template_directory();
+    }
+    if ( function_exists( 'WC' ) && is_object( WC() ) && method_exists( WC(), 'plugin_path' ) ) {
+        $candidates[] = WC()->plugin_path();
+    }
+
+    $allowed_bases = array();
+    foreach ( $candidates as $candidate ) {
+        if ( ! empty( $candidate ) && ( $b = realpath( $candidate ) ) ) {
+            $allowed_bases[] = wp_normalize_path( $b );
+        }
+    }
+
+    foreach ( $allowed_bases as $base ) {
+        if ( empty( $base ) ) {
+            continue;
+        }
+        // $real must be the base itself or a directory nested inside it.
+        if ( $real === $base || 0 === strpos( $real, trailingslashit( $base ) ) ) {
+            return $real;
+        }
+    }
+
+    return '';
 }
 
 /**
@@ -2582,11 +2658,33 @@ function auxin_escape_json( $json_array ) {
 
 /**
  * Check if a string is in json format or not
- * 
+ *
  * $param string $json
  * @return bool
  */
 function auxin_is_json( $json ) {
     json_decode( $json );
     return json_last_error() === JSON_ERROR_NONE;
+}
+
+/**
+ * Safely outputs a JSON string for embedding in a <script> tag.
+ *
+ * Escapes characters that could break out of the script context (</script> injection)
+ * or cause HTML entity interpretation issues.
+ *
+ * @param  string $json A valid JSON string.
+ * @return string       The escaped JSON string safe for output in a script tag, or empty on invalid input.
+ */
+function auxin_safe_json_for_js( $json ) {
+    if ( ! auxin_is_json( $json ) ) {
+        return '';
+    }
+    // Escape characters that could close the <script> tag or be interpreted as HTML.
+    // These characters are semantically equivalent in JSON and are decoded by JSON parsers.
+    return str_replace(
+        array( '<',    '>',    '&'    ),
+        array( '<', '>', '&' ),
+        $json
+    );
 }

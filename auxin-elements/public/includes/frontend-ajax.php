@@ -24,11 +24,20 @@ function auxels_ajax_handler_element_load_more(){
         wp_send_json_error( __( 'Authorization failed.', 'auxin-elements' ) );
     }
 
+    // include the required resources up front so helpers are available
+    require_once( AUXELS_INC_DIR . '/general-functions.php' );
+
     $ajax_args      = auxin_sanitize_input( $_POST['args'] );
     $element_markup = '';
 
-    // include the required resources
-    require_once( AUXELS_INC_DIR . '/general-functions.php' );
+    // Harden against Local File Inclusion: never trust a caller-supplied
+    // template directory on this unauthenticated endpoint. Validate it
+    // against the allow-list of trusted base directories.
+    if ( isset( $ajax_args['extra_template_path'] ) ) {
+        $ajax_args['extra_template_path'] = auxin_sanitize_template_path( $ajax_args['extra_template_path'] );
+    }
+
+    // include the remaining required resources
     require_once( THEME_DIR . AUXIN_INC . 'include/functions.php' );
     require_once( THEME_DIR . AUXIN_INC . 'include/templates/templates-post.php' );
 

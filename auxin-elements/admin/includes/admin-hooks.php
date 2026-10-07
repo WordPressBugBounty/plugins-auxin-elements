@@ -47,6 +47,9 @@ add_action("init", "auxels_init_shortcode_manager");
  * @return void
  */
 function auxels_hide_wizard_notice() {
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return;
+    }
     if ( isset( $_GET['auxels-hide-wizard-notice'] ) && isset( $_GET['_notice_nonce'] ) ) {
         if ( ! wp_verify_nonce( $_GET['_notice_nonce'], 'auxels_hide_notices_nonce' ) ) {
             wp_die( __( 'Authorization failed. Please refresh the page and try again.', 'auxin-elements' ) );
@@ -815,6 +818,9 @@ add_action('auxin_plugin_updated', function( $flush_required, $plugin_slug, $plu
  * @return void
  */
 function auxin_check_license_terms(){
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return;
+    }
     if( isset( $_GET['auxin-debug'] ) && isset( $_GET['activation'] ) ){
         if( 'expire' === $_GET['activation'] ){
             delete_site_option( THEME_ID . '_license' );

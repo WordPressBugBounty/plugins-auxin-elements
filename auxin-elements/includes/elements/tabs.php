@@ -183,7 +183,7 @@ function auxin_widget_tabs_callback( $atts, $shortcode_content = null ){
             );
             $tabs_markup .= sprintf( '<li><a %s>%s</a></li>',
                 auxin_make_html_attributes( $tab_attrs ),
-                $value['tab_label']
+                esc_html( $value['tab_label'] )
             );
 
             // Content
@@ -204,7 +204,7 @@ function auxin_widget_tabs_callback( $atts, $shortcode_content = null ){
 
             $tabs_content .= sprintf( '<li><div %s><p>%s</p></div></li>',
                 auxin_make_html_attributes( $content_attrs ),
-                $content
+                wp_kses_post( $content )
             );
 
         }

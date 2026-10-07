@@ -479,7 +479,7 @@ function auxin_widget_image_callback( $atts, $shortcode_content = null ){
         if( ! empty( $image_primary_meta['height'] ) ){
             $lightbox_attrs .= 'data-original-height="' . $image_primary_meta['height'] . '" ';
         }
-        $lightbox_attrs     .= 'data-caption="' . auxin_attachment_caption( $attach_id ) . '"';
+        $lightbox_attrs     .= 'data-caption="' . esc_attr( auxin_attachment_caption( $attach_id ) ) . '"';
 
     } elseif( ! empty( $image_html ) ) {
         $image_primary = $image_html;

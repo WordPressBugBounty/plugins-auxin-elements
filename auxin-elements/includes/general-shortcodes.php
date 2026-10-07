@@ -281,7 +281,7 @@ function auxin_shortcode_timeline( $atts, $content = null ) {
             $show_title = false;
             $has_attach = false;
             $quote  = auxin_get_trimmed_string($quote,$excerpt_len, " ...");
-            $quote .= "<br/>- <cite>".$author."</cite>";
+            $quote .= "<br/>- <cite>" . esc_html( $author ) . "</cite>";
             $the_attach = do_shortcode('[blockquote size="0" indent="no" ]'.$quote.'[/blockquote]');
             unset($quote);
             break;

@@ -1113,7 +1113,7 @@ function auxin_widget_recent_posts_callback( $atts, $shortcode_content = null ){
 
             } else {
                 printf( '<div class="%s post-%s">', esc_attr( $item_class ), esc_attr( $post->ID ) );
-                include auxin_get_template_file( $template_part_file, '', $extra_template_path );
+                include auxin_get_template_file( $template_part_file, '', auxin_sanitize_template_path( $extra_template_path ) );
                 echo    '</div>';
             }
 

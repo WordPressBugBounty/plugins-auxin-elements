@@ -1,4 +1,4 @@
-/*! Phlox Core Plugin - v2.17.22 (2026-08)
+/*! Phlox Core Plugin - v2.17.24 (2026-10)
  *  All required plugins 
  *  http://phlox.pro/
  */

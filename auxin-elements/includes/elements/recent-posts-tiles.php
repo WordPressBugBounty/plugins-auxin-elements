@@ -614,7 +614,7 @@ function auxin_widget_recent_posts_tiles_callback( $atts, $shortcode_content = n
 
             $the_format = get_post_format( $post );
 
-            include auxin_get_template_file( $template_part_file, '', $extra_template_path );
+            include auxin_get_template_file( $template_part_file, '', auxin_sanitize_template_path( $extra_template_path ) );
         }
 
         if( ! $skip_wrappers ) {

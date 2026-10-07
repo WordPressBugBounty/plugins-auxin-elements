@@ -1603,7 +1603,7 @@ class MenuBox extends Widget_Base {
         if ( 'default' === $settings['burger_type'] ) {
             $burger_content = '<div class="aux-burger ' . esc_attr( $settings['burger_btn_style'] ) . '"><span class="mid-line"></span></div>';
         } else {
-            $burger_custom = preg_replace( '/<script\b[^>]*>.*?<\/script>/is', '', $settings['burger_custom'] );
+            $burger_custom = wp_kses_post( $settings['burger_custom'] );
             $burger_content = '<div class="aux-burger aux-custom-burger">' . $burger_custom . '</div>';
         }
 

@@ -382,7 +382,7 @@ function auxin_widget_contact_box( $atts, $shortcode_content = null ){
         $contact_info .= '<li class="phone"><i class="auxicon-phone-classic-on"></i><span class="info-text">'. esc_html( $telephone ) .'</span></li>';
     }
     if( ! empty( $email ) ){
-        $contact_info .= '<li class="email"><i class="auxicon-mail-3"></i><span class="info-text">'. antispambot( $email ) .'</span></li>';
+        $contact_info .= '<li class="email"><i class="auxicon-mail-3"></i><span class="info-text">'. esc_html( antispambot( $email ) ) .'</span></li>';
     }
     if( ! empty( $address ) ){
         $contact_info .= '<li class="address"><i class="auxicon-map-pin-streamline"></i><span class="info-text">'. esc_html( $address ) .'</span></li>';
@@ -446,7 +446,7 @@ function auxin_widget_contact_box( $atts, $shortcode_content = null ){
                 <?php if( $type == "ROADMAP" ){ ?>
                 map.addStyle({
                     styledMapName:"Auxin custom style map",
-                    styles: <?php echo ( auxin_is_json( $style ) ? $style : auxin_get_gmap_style() ); ?>,
+                    styles: <?php echo auxin_safe_json_for_js( auxin_is_json( $style ) ? $style : auxin_get_gmap_style() ); ?>,
                     mapTypeId: "aux_map_style"
                 });
 

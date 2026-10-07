@@ -298,7 +298,7 @@ function auxin_widget_gmaps_callback( $atts, $shortcode_content = null ){
                 <?php if( $type == "ROADMAP" ){ ?>
                 map.addStyle({
                     styledMapName:"Auxin custom style map",
-                    styles: <?php echo ( auxin_is_json( $style ) ? $style : auxin_get_gmap_style() ); ?>,
+                    styles: <?php echo auxin_safe_json_for_js( auxin_is_json( $style ) ? $style : auxin_get_gmap_style() ); ?>,
                     mapTypeId: "aux_map_style"
                 });
 

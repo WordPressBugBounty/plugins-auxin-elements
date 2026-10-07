@@ -720,7 +720,7 @@ function auxin_widget_recent_posts_tiles_carousel_callback( $atts, $shortcode_co
 
             $the_format = get_post_format( $post );
 
-            include auxin_get_template_file( $template_part_file, '', $extra_template_path );
+            include auxin_get_template_file( $template_part_file, '', auxin_sanitize_template_path( $extra_template_path ) );
 
             if ( ( $post_counter   %  $num ) == 0 ){
             $post_counter = 0;

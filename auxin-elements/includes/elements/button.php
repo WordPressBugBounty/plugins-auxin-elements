@@ -349,13 +349,13 @@ function auxin_widget_button_callback( $atts = array(), $shortcode_content = nul
 
         foreach( $custom_styles as $property => $value ) {
             if ( 'custom' === $property ) {
-                $extra_styles .= $value;
+                $extra_styles .= sanitize_text_field( $value );
             } else {
                 $extra_styles  .=  $property . ':' . esc_attr( $value ) . ';';
             }
         }
 
-        $extra_styles = 'style="' . $extra_styles . '"';
+        $extra_styles = 'style="' . esc_attr( $extra_styles ) . '"';
 
     }
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auxin Essential Elements\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-08-01 13:48:37+00:00\n"
+"POT-Creation-Date: 2026-10-07 11:41:11+00:00\n"
 "PO-Revision-Date: 2016-11-09 12:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,13 +26,13 @@ msgid "Data cannot be delivered, please try again."
 msgstr "داده ها قابل تحویل نیستند، لطفا دوباره تلاش کنید."
 
 #: admin/includes/admin-ajax.php:18 admin/includes/admin-ajax.php:83
-#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:506
+#: admin/includes/admin-ajax.php:111 admin/includes/admin-ajax.php:403
 msgid "Authorization failed!"
 msgstr "احراز هویت با خطا مواجه شد!"
 
 #: admin/includes/admin-ajax.php:22 admin/includes/admin-ajax.php:87
-#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:434
-#: admin/includes/admin-ajax.php:512
+#: admin/includes/admin-ajax.php:132 admin/includes/admin-ajax.php:331
+#: admin/includes/admin-ajax.php:409
 #: includes/classes/class-auxels-envato-elements.php:89
 #: includes/classes/class-auxin-demo-importer.php:210
 #: includes/classes/class-auxin-demo-importer.php:245
@@ -47,9 +47,9 @@ msgstr "با موفقیت ارسال شد. از بازخورد شما ممنون
 msgid "An error occurred. Feedback could not be delivered, please try again."
 msgstr "خطایی رخ داده است. بازخورد قابل تحویل نیست، لطفا دوباره تلاش کنید."
 
-#: admin/includes/admin-ajax.php:128 admin/includes/admin-ajax.php:254
-#: admin/includes/admin-ajax.php:324 admin/includes/admin-ajax.php:359
-#: admin/includes/admin-ajax.php:385 admin/includes/admin-ajax.php:430
+#: admin/includes/admin-ajax.php:128 admin/includes/admin-ajax.php:151
+#: admin/includes/admin-ajax.php:221 admin/includes/admin-ajax.php:256
+#: admin/includes/admin-ajax.php:282 admin/includes/admin-ajax.php:327
 msgid "Token Error."
 msgstr ""
 
@@ -61,49 +61,49 @@ msgstr ""
 msgid "An error occurred."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:257
+#: admin/includes/admin-ajax.php:154
 msgid "It's OK."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:269
+#: admin/includes/admin-ajax.php:166
 msgid "You do not have permission to perform this action."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:274
+#: admin/includes/admin-ajax.php:171
 #: includes/classes/class-auxin-welcome.php:1215
 #: includes/classes/class-auxin-welcome.php:1220
 #: includes/classes/class-auxin-welcome.php:1388
 msgid "Security Token Error!"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:281
+#: admin/includes/admin-ajax.php:178
 msgid "License Activation"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:282
+#: admin/includes/admin-ajax.php:179
 msgid ""
 "Please activate your license to get automatic updates, premium support, and "
 "unlimited access to the template library and demo importer."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:285
+#: admin/includes/admin-ajax.php:182
 #, fuzzy
 msgid "E-mail address"
 msgstr "آدرس ایمیل جعبه تماس"
 
-#: admin/includes/admin-ajax.php:290
+#: admin/includes/admin-ajax.php:187
 msgid "Purchase code"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:298
+#: admin/includes/admin-ajax.php:195
 msgid "Activate"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:317
+#: admin/includes/admin-ajax.php:214
 msgid "Persmission Error."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:318 admin/includes/admin-ajax.php:336
+#: admin/includes/admin-ajax.php:215 admin/includes/admin-ajax.php:233
 #: includes/classes/class-auxin-demo-importer.php:115
 #: includes/classes/class-auxin-demo-importer.php:158
 #: includes/classes/class-auxin-demo-importer.php:193
@@ -113,48 +113,48 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:325 admin/includes/admin-ajax.php:340
+#: admin/includes/admin-ajax.php:222 admin/includes/admin-ajax.php:237
 #: includes/classes/class-auxin-demo-importer.php:191
 msgid "Retry"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:367 admin/includes/admin-ajax.php:389
+#: admin/includes/admin-ajax.php:264 admin/includes/admin-ajax.php:286
 #: includes/classes/class-auxin-welcome.php:1225
 #: includes/classes/class-auxin-welcome.php:1501
 msgid "Permission Error."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:405
+#: admin/includes/admin-ajax.php:302
 msgid "No data found!"
 msgstr ""
 
-#: admin/includes/admin-ajax.php:439
+#: admin/includes/admin-ajax.php:336
 #, fuzzy
 msgid "Please upload a valid file."
 msgstr "لطفا فایل ویدیو را بارگذاری کنید."
 
-#: admin/includes/admin-ajax.php:454
+#: admin/includes/admin-ajax.php:351
 msgid "Invalid or Empty Data."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:491
+#: admin/includes/admin-ajax.php:388
 msgid "Successfully Imported."
 msgstr ""
 
-#: admin/includes/admin-ajax.php:519
+#: admin/includes/admin-ajax.php:416
 msgid "Invalid template ID."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:52
+#: admin/includes/admin-hooks.php:55
 #: admin/includes/classes/class-auxin-notices.php:222
 msgid "Authorization failed. Please refresh the page and try again."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:81
+#: admin/includes/admin-hooks.php:84
 msgid "Subtitle for Title Bar"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:82
+#: admin/includes/admin-hooks.php:85
 #, fuzzy
 msgid ""
 "Second Title for title bar (optional). Note: You have to enable \"Display "
@@ -163,12 +163,12 @@ msgstr ""
 "عنوان دوم (دلخواه). نکته: شما باید گزینه \"نمایش بخش نوار عنوان\" را فعال "
 "کرده باشید تا زیرعنوان نمایش داده شود."
 
-#: admin/includes/admin-hooks.php:95
+#: admin/includes/admin-hooks.php:98
 #, fuzzy
 msgid "Subtitle Position"
 msgstr "زیرعنوان"
 
-#: admin/includes/admin-hooks.php:101
+#: admin/includes/admin-hooks.php:104
 #: includes/elementor/widgets/recent-posts-grid-carousel.php:486
 #: includes/elementor/widgets/recent-posts-masonry.php:286
 #: includes/elementor/widgets/theme-elements/site-title.php:127
@@ -176,7 +176,7 @@ msgstr "زیرعنوان"
 msgid "Before Title"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:102
+#: admin/includes/admin-hooks.php:105
 #: includes/elementor/widgets/recent-posts-grid-carousel.php:485
 #: includes/elementor/widgets/recent-posts-masonry.php:285
 #: includes/elementor/widgets/theme-elements/site-title.php:158
@@ -185,25 +185,25 @@ msgstr ""
 msgid "After Title"
 msgstr "عنوان"
 
-#: admin/includes/admin-hooks.php:134
+#: admin/includes/admin-hooks.php:137
 msgid "Upgrade Phlox"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:152
+#: admin/includes/admin-hooks.php:155
 msgid "Maintenance Mode"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:197
+#: admin/includes/admin-hooks.php:200
 #, fuzzy
 msgid "Update Plugins"
 msgstr "افزونه های فعال"
 
-#: admin/includes/admin-hooks.php:198
+#: admin/includes/admin-hooks.php:201
 #, fuzzy
 msgid "Update Plugins %s"
 msgstr "افزونه های فعال"
 
-#: admin/includes/admin-hooks.php:393
+#: admin/includes/admin-hooks.php:396
 #, fuzzy
 msgid ""
 "Quick access to %s %sdashboard%s, %sdemo importer%s, %soptions%s, and "
@@ -211,60 +211,60 @@ msgid ""
 msgstr ""
 "دسترسی سریع به صفحات %sپیشخوان%s، %sتنظیمات%s، %sپشتیبانی%s و %sبازخورد%s."
 
-#: admin/includes/admin-hooks.php:396
+#: admin/includes/admin-hooks.php:399
 msgid "%s theme version %s"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:398
+#: admin/includes/admin-hooks.php:401
 msgid "Theme Demo Importer"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:400
+#: admin/includes/admin-hooks.php:403
 msgid "Theme Customizer"
 msgstr "شخصی ساز پوسته"
 
-#: admin/includes/admin-hooks.php:424
+#: admin/includes/admin-hooks.php:427
 msgid "You are using %1$s theme version %2$s."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:433
+#: admin/includes/admin-hooks.php:436
 msgid "Please support us to continue this project by rating it %s"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:559
+#: admin/includes/admin-hooks.php:562
 msgid ""
 "Please make sure the image aspect ratio for all image sizes are the same."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:615 includes/general-hooks.php:996
+#: admin/includes/admin-hooks.php:618 includes/general-hooks.php:996
 #, fuzzy
 msgid "Footer Brand Image"
 msgstr "تصویر پوستر"
 
-#: admin/includes/admin-hooks.php:616 includes/general-hooks.php:997
+#: admin/includes/admin-hooks.php:619 includes/general-hooks.php:997
 msgid "This image appears as site brand image on footer section."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:657
+#: admin/includes/admin-hooks.php:660
 #, fuzzy
 msgid "Activate License"
 msgstr "افزونه های فعال"
 
-#: admin/includes/admin-hooks.php:662
+#: admin/includes/admin-hooks.php:665
 #: includes/classes/class-auxin-welcome-sections.php:548
 msgid "Remind Me Later"
 msgstr ""
 
-#: admin/includes/admin-hooks.php:746
+#: admin/includes/admin-hooks.php:749
 msgid "Phlox is Not Activated! to Unlock All Features Activate Now."
 msgstr ""
 
-#: admin/includes/admin-hooks.php:750
+#: admin/includes/admin-hooks.php:753
 #, fuzzy
 msgid "Activate Now"
 msgstr "بخش فعال"
 
-#: admin/includes/admin-hooks.php:799
+#: admin/includes/admin-hooks.php:802
 #, fuzzy
 msgid "Uncategorized"
 msgstr "دسته"
@@ -2633,7 +2633,7 @@ msgid "Demo has been successfully uninstalled."
 msgstr ""
 
 #: includes/classes/class-auxin-welcome.php:1421
-#: public/includes/frontend-ajax.php:186 public/includes/frontend-ajax.php:251
+#: public/includes/frontend-ajax.php:195 public/includes/frontend-ajax.php:260
 msgid "An Error Occurred!"
 msgstr ""
 
@@ -12967,49 +12967,49 @@ msgstr ""
 msgid "Authorization failed."
 msgstr "احراز هویت با خطا مواجه شد."
 
-#: public/includes/frontend-ajax.php:109
+#: public/includes/frontend-ajax.php:118
 #, fuzzy
 msgid "Not a valid handler."
 msgstr "اصلا"
 
-#: public/includes/frontend-ajax.php:115
+#: public/includes/frontend-ajax.php:124
 msgid "No data received."
 msgstr ""
 
-#: public/includes/frontend-ajax.php:142 public/includes/frontend-ajax.php:211
+#: public/includes/frontend-ajax.php:151 public/includes/frontend-ajax.php:220
 #, fuzzy
 msgid "Verification failed!"
 msgstr "احراز هویت با خطا مواجه شد!"
 
-#: public/includes/frontend-ajax.php:164 public/includes/frontend-ajax.php:280
+#: public/includes/frontend-ajax.php:173 public/includes/frontend-ajax.php:289
 msgid "Cart is empty"
 msgstr ""
 
-#: public/includes/frontend-ajax.php:179
+#: public/includes/frontend-ajax.php:188
 msgid "Your cart is currently empty."
 msgstr ""
 
-#: public/includes/frontend-ajax.php:180
+#: public/includes/frontend-ajax.php:189
 msgid "Item has been removed from your shopping cart."
 msgstr ""
 
-#: public/includes/frontend-ajax.php:240
+#: public/includes/frontend-ajax.php:249
 msgid "View cart"
 msgstr ""
 
-#: public/includes/frontend-ajax.php:240
+#: public/includes/frontend-ajax.php:249
 msgid "has been added to your cart."
 msgstr ""
 
-#: public/includes/frontend-ajax.php:245
+#: public/includes/frontend-ajax.php:254
 msgid "Sorry, this product cannot be purchased."
 msgstr ""
 
-#: public/includes/frontend-ajax.php:338
+#: public/includes/frontend-ajax.php:347
 msgid "From %s"
 msgstr ""
 
-#: public/includes/frontend-ajax.php:339
+#: public/includes/frontend-ajax.php:348
 msgid "Nothing found in %s"
 msgstr ""
 

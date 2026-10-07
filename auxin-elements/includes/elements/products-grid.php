@@ -63,7 +63,7 @@ function auxin_widget_products_grid_callback( $atts, $shortcode_content = null )
     echo "<div class='woocommerce woocommerce-page aux-shop-archive'>";
     woocommerce_product_loop_start();
     // widget custom output -----------------------
-    include_once auxin_get_template_file( $result['parsed_atts']['template_part_file'], '', $result['parsed_atts']['extra_template_path'] );
+    include_once auxin_get_template_file( $result['parsed_atts']['template_part_file'], '', auxin_sanitize_template_path( $result['parsed_atts']['extra_template_path'] ) );
     echo auxin_products_grid( $result['parsed_atts'] );
     woocommerce_product_loop_end();
     unset( $GLOBALS['woocommerce_loop'] );
