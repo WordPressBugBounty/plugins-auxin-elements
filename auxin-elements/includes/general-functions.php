@@ -22,6 +22,35 @@ if( ! function_exists( 'auxin_is_plugin_active' ) ){
     }
 }
 
+/**
+ * Validate the variable as boolean.
+ * Polyfill of Phlox theme helper so plugin hooks do not fatal when the theme
+ * framework has not loaded (e.g. WP-CLI / Plesk). Theme copy is guarded with
+ * function_exists(), so whichever loads first wins.
+ */
+if( ! function_exists('auxin_is_true') ){
+
+    function auxin_is_true( $var ) {
+        if ( is_bool( $var ) ) {
+            return $var;
+        }
+
+        if ( is_string( $var ) ){
+            $var = strtolower( $var );
+            if( in_array( $var, array( 'yes', 'on', 'true', 'checked' ) ) ){
+                return true;
+            }
+        }
+
+        if ( is_numeric( $var ) ) {
+            return (bool) $var;
+        }
+
+        return false;
+    }
+
+}
+
 
 /**
  * Retrieves the markup for footer logo element

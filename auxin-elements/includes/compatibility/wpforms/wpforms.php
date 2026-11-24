@@ -1630,4 +1630,4 @@ function auxin_extend_wpforms_elementor_widget($element, $args) {
 
         $element->end_controls_section();
 }
-add_action( 'elementor/element/wpforms/themes/after_section_end', 'auxin_extend_wpforms_elementor_widget', 10, 2 );
+add_action( 'elementor/element/wpforms/form_theme/after_section_end', 'auxin_extend_wpforms_elementor_widget', 10, 2 );

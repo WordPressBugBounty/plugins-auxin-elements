@@ -1113,8 +1113,6 @@ class Auxin_Demo_Importer {
 
                 }
 
-                $this->maybe_flush_post( $post_id );
-
             } else {
 
                 continue;
@@ -1174,12 +1172,15 @@ class Auxin_Demo_Importer {
 
         $query = new WP_Query($args);
 
+        $IDs = [];
+
         if ( $query->have_posts() ) {
             while( $query->have_posts() ) {
                 $query->the_post();
 
                 global $post;
                 $post_ID = get_the_ID();
+                $IDs[] = $post_ID;
 
                 if ( get_post_type( $post_ID ) == 'product_variation' ) {
                     $old_products_id = maybe_unserialize( auxin_get_transient( 'aux-old-products-id-transformation' ) );
@@ -1386,6 +1387,12 @@ class Auxin_Demo_Importer {
                     update_post_meta( get_the_ID(), 'page_elementor_footer_edit_template', auxin_get_transient( "aux-elementor-library-{$old_id}-changs-to" ) );
                     update_post_meta( get_the_ID(), 'page_elementor_footer_template', auxin_get_transient( "aux-elementor-library-{$old_id}-changs-to" ) );
                 }
+            }
+        }
+
+        if (!empty($IDs)) {
+            foreach ($IDs as $key => $ID) {
+                $this->maybe_flush_post($ID);
             }
         }
         wp_reset_postdata();

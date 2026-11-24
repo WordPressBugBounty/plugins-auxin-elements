@@ -1,9 +1,9 @@
 # Averta Copyright (c) {2026}
 msgid ""
 msgstr ""
-"Project-Id-Version: Phlox Core Elements 2.17.24\n"
+"Project-Id-Version: Phlox Core Elements 2.17.26\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-10-07 11:41:11+00:00\n"
+"POT-Creation-Date: 2026-11-24 13:47:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
 
 #: admin/includes/admin-ajax.php:7 admin/includes/admin-ajax.php:77
 #: admin/includes/admin-ajax.php:105
@@ -584,7 +584,7 @@ msgstr ""
 #: admin/includes/metaboxes/metabox-fields-general-top-header.php:164
 #: admin/includes/metaboxes/metabox-fields-general-top-header.php:194
 #: includes/elementor/widgets/audio.php:160 includes/elements/audio.php:102
-#: includes/general-functions.php:1871
+#: includes/general-functions.php:1900
 msgid "Theme Default"
 msgstr ""
 
@@ -1888,7 +1888,7 @@ msgid "Importing Media"
 msgstr ""
 
 #: includes/classes/class-auxin-demo-importer.php:314
-#: includes/classes/class-auxin-demo-importer.php:1485
+#: includes/classes/class-auxin-demo-importer.php:1492
 msgid "Importing Users"
 msgstr ""
 
@@ -1918,11 +1918,11 @@ msgstr ""
 msgid "Importing Sliders"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1574
+#: includes/classes/class-auxin-demo-importer.php:1581
 msgid "Preparing Site ..."
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1634
+#: includes/classes/class-auxin-demo-importer.php:1641
 msgid "All steps are successful"
 msgstr ""
 
@@ -10132,7 +10132,7 @@ msgstr ""
 msgid "Specifies whether to display posts from a page or group."
 msgstr ""
 
-#: includes/elements/facebook.php:61 includes/general-functions.php:1621
+#: includes/elements/facebook.php:61 includes/general-functions.php:1650
 msgid "Page"
 msgstr ""
 
@@ -10511,7 +10511,7 @@ msgstr ""
 msgid "Self"
 msgstr ""
 
-#: includes/elements/image.php:247 includes/general-functions.php:1996
+#: includes/elements/image.php:247 includes/general-functions.php:2025
 msgid "Blank"
 msgstr ""
 
@@ -11407,114 +11407,114 @@ msgstr ""
 msgid "Video link"
 msgstr ""
 
-#: includes/general-functions.php:189
+#: includes/general-functions.php:218
 msgid "\"%s\" Plugin is Not Activated!"
 msgstr ""
 
-#: includes/general-functions.php:192
+#: includes/general-functions.php:221
 msgid "In order to use this element, you need to install and activate this plugin."
 msgstr ""
 
-#: includes/general-functions.php:1609
+#: includes/general-functions.php:1638
 msgid "Previous"
 msgstr ""
 
-#: includes/general-functions.php:1610
+#: includes/general-functions.php:1639
 msgid "page"
 msgstr ""
 
-#: includes/general-functions.php:1620
+#: includes/general-functions.php:1649
 msgid "Next"
 msgstr ""
 
-#: includes/general-functions.php:1631
+#: includes/general-functions.php:1660
 msgid "LOAD MORE"
 msgstr ""
 
-#: includes/general-functions.php:1639
+#: includes/general-functions.php:1668
 msgid "MORE"
 msgstr ""
 
-#: includes/general-functions.php:1651
+#: includes/general-functions.php:1680
 msgid "LOADING"
 msgstr ""
 
-#: includes/general-functions.php:1997
+#: includes/general-functions.php:2026
 msgid "Blurred placeholder image"
 msgstr ""
 
-#: includes/general-functions.php:1998
+#: includes/general-functions.php:2027
 msgid "In-progress box animation"
 msgstr ""
 
-#: includes/general-functions.php:1999
+#: includes/general-functions.php:2028
 msgid "Loading spinner (blue)"
 msgstr ""
 
-#: includes/general-functions.php:2000
+#: includes/general-functions.php:2029
 msgid "Loading spinner (light)"
 msgstr ""
 
-#: includes/general-functions.php:2001
+#: includes/general-functions.php:2030
 msgid "Loading spinner (dark)"
 msgstr ""
 
-#: includes/general-functions.php:2228
+#: includes/general-functions.php:2257
 #. translators: %s: Search term.
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/general-functions.php:2232
+#: includes/general-functions.php:2261
 #. translators: %s is the page number.
 msgid "&nbsp;&ndash; Page %s"
 msgstr ""
 
-#: includes/general-functions.php:2239
+#: includes/general-functions.php:2268
 #. translators: Category archive title. 1: Category name
 msgid "Category: %s"
 msgstr ""
 
-#: includes/general-functions.php:2245
+#: includes/general-functions.php:2274
 #. translators: Tag archive title. 1: Tag name
 msgid "Tag: %s"
 msgstr ""
 
-#: includes/general-functions.php:2252
+#: includes/general-functions.php:2281
 #. translators: Author archive title. 1: Author name
 msgid "Author: %s"
 msgstr ""
 
-#: includes/general-functions.php:2259
+#: includes/general-functions.php:2288
 #. translators: Yearly archive title. 1: Year
 msgid "Year: %s"
 msgstr ""
 
-#: includes/general-functions.php:2266
+#: includes/general-functions.php:2295
 #. translators: Monthly archive title. 1: Month name and year
 msgid "Month: %s"
 msgstr ""
 
-#: includes/general-functions.php:2273
+#: includes/general-functions.php:2302
 #. translators: Daily archive title. 1: Date
 msgid "Day: %s"
 msgstr ""
 
-#: includes/general-functions.php:2300
+#: includes/general-functions.php:2329
 #. translators: Post type archive title. 1: Post type name
 msgid "Archives: %s"
 msgstr ""
 
-#: includes/general-functions.php:2308
+#: includes/general-functions.php:2337
 #. translators: Taxonomy term archive title. 1: Taxonomy singular name, 2:
 #. Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: includes/general-functions.php:2311
+#: includes/general-functions.php:2340
 msgid "Page Not Found"
 msgstr ""
 
-#: includes/general-functions.php:2490
+#: includes/general-functions.php:2519
 msgid "Select Page"
 msgstr ""
 
@@ -12214,62 +12214,62 @@ msgstr ""
 msgid "http://averta.net"
 msgstr ""
 
-#: includes/general-functions.php:2255
+#: includes/general-functions.php:2284
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: includes/general-functions.php:2262
+#: includes/general-functions.php:2291
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: includes/general-functions.php:2269
+#: includes/general-functions.php:2298
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: includes/general-functions.php:2277
+#: includes/general-functions.php:2306
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: includes/general-functions.php:2279
+#: includes/general-functions.php:2308
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: includes/general-functions.php:2281
+#: includes/general-functions.php:2310
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: includes/general-functions.php:2283
+#: includes/general-functions.php:2312
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: includes/general-functions.php:2285
+#: includes/general-functions.php:2314
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: includes/general-functions.php:2287
+#: includes/general-functions.php:2316
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: includes/general-functions.php:2289
+#: includes/general-functions.php:2318
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: includes/general-functions.php:2291
+#: includes/general-functions.php:2320
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: includes/general-functions.php:2293
+#: includes/general-functions.php:2322
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""

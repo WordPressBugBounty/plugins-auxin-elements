@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auxin Essential Elements\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2026-10-07 11:41:11+00:00\n"
+"POT-Creation-Date: 2026-11-24 13:47:38+00:00\n"
 "PO-Revision-Date: 2016-11-09 12:50+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -620,7 +620,7 @@ msgstr ""
 #: admin/includes/metaboxes/metabox-fields-general-top-header.php:164
 #: admin/includes/metaboxes/metabox-fields-general-top-header.php:194
 #: includes/elementor/widgets/audio.php:160 includes/elements/audio.php:102
-#: includes/general-functions.php:1871
+#: includes/general-functions.php:1900
 msgid "Theme Default"
 msgstr "پیشفرض پوسته"
 
@@ -2010,7 +2010,7 @@ msgid "Importing Media"
 msgstr ""
 
 #: includes/classes/class-auxin-demo-importer.php:314
-#: includes/classes/class-auxin-demo-importer.php:1485
+#: includes/classes/class-auxin-demo-importer.php:1492
 msgid "Importing Users"
 msgstr ""
 
@@ -2041,11 +2041,11 @@ msgstr ""
 msgid "Importing Sliders"
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1574
+#: includes/classes/class-auxin-demo-importer.php:1581
 msgid "Preparing Site ..."
 msgstr ""
 
-#: includes/classes/class-auxin-demo-importer.php:1634
+#: includes/classes/class-auxin-demo-importer.php:1641
 msgid "All steps are successful"
 msgstr ""
 
@@ -10797,7 +10797,7 @@ msgstr "نوع صفحه"
 msgid "Specifies whether to display posts from a page or group."
 msgstr "مشخص می کند پست ها از یک صفحه یا گروه نمایش داده شوند."
 
-#: includes/elements/facebook.php:61 includes/general-functions.php:1621
+#: includes/elements/facebook.php:61 includes/general-functions.php:1650
 msgid "Page"
 msgstr "صفحه"
 
@@ -11201,7 +11201,7 @@ msgstr "در صفحه جدید یا در همین صفحه باز شود."
 msgid "Self"
 msgstr "همین صفحه"
 
-#: includes/elements/image.php:247 includes/general-functions.php:1996
+#: includes/elements/image.php:247 includes/general-functions.php:2025
 msgid "Blank"
 msgstr "خالی"
 
@@ -12175,119 +12175,119 @@ msgstr "لطفا فایل ویدیو را بارگذاری کنید."
 msgid "Video link"
 msgstr "پیوند ویدیو"
 
-#: includes/general-functions.php:189
+#: includes/general-functions.php:218
 msgid "\"%s\" Plugin is Not Activated!"
 msgstr ""
 
-#: includes/general-functions.php:192
+#: includes/general-functions.php:221
 msgid ""
 "In order to use this element, you need to install and activate this plugin."
 msgstr ""
 
-#: includes/general-functions.php:1609
+#: includes/general-functions.php:1638
 #, fuzzy
 msgid "Previous"
 msgstr "قبلی و بعدی"
 
-#: includes/general-functions.php:1610
+#: includes/general-functions.php:1639
 #, fuzzy
 msgid "page"
 msgstr "صفحه بندی شده"
 
-#: includes/general-functions.php:1620
+#: includes/general-functions.php:1649
 msgid "Next"
 msgstr ""
 
-#: includes/general-functions.php:1631
+#: includes/general-functions.php:1660
 msgid "LOAD MORE"
 msgstr ""
 
-#: includes/general-functions.php:1639
+#: includes/general-functions.php:1668
 msgid "MORE"
 msgstr ""
 
-#: includes/general-functions.php:1651
+#: includes/general-functions.php:1680
 msgid "LOADING"
 msgstr ""
 
-#: includes/general-functions.php:1997
+#: includes/general-functions.php:2026
 msgid "Blurred placeholder image"
 msgstr ""
 
-#: includes/general-functions.php:1998
+#: includes/general-functions.php:2027
 msgid "In-progress box animation"
 msgstr ""
 
-#: includes/general-functions.php:1999
+#: includes/general-functions.php:2028
 msgid "Loading spinner (blue)"
 msgstr ""
 
-#: includes/general-functions.php:2000
+#: includes/general-functions.php:2029
 msgid "Loading spinner (light)"
 msgstr ""
 
-#: includes/general-functions.php:2001
+#: includes/general-functions.php:2030
 msgid "Loading spinner (dark)"
 msgstr ""
 
 #. translators: %s: Search term.
-#: includes/general-functions.php:2228
+#: includes/general-functions.php:2257
 msgid "Search Results for: %s"
 msgstr ""
 
 #. translators: %s is the page number.
-#: includes/general-functions.php:2232
+#: includes/general-functions.php:2261
 msgid "&nbsp;&ndash; Page %s"
 msgstr ""
 
 #. translators: Category archive title. 1: Category name
-#: includes/general-functions.php:2239
+#: includes/general-functions.php:2268
 #, fuzzy
 msgid "Category: %s"
 msgstr "دسته 1"
 
 #. translators: Tag archive title. 1: Tag name
-#: includes/general-functions.php:2245
+#: includes/general-functions.php:2274
 msgid "Tag: %s"
 msgstr ""
 
 #. translators: Author archive title. 1: Author name
-#: includes/general-functions.php:2252
+#: includes/general-functions.php:2281
 #, fuzzy
 msgid "Author: %s"
 msgstr "نویسنده"
 
 #. translators: Yearly archive title. 1: Year
-#: includes/general-functions.php:2259
+#: includes/general-functions.php:2288
 msgid "Year: %s"
 msgstr ""
 
 #. translators: Monthly archive title. 1: Month name and year
-#: includes/general-functions.php:2266
+#: includes/general-functions.php:2295
 msgid "Month: %s"
 msgstr ""
 
 #. translators: Daily archive title. 1: Date
-#: includes/general-functions.php:2273
+#: includes/general-functions.php:2302
 msgid "Day: %s"
 msgstr ""
 
 #. translators: Post type archive title. 1: Post type name
-#: includes/general-functions.php:2300
+#: includes/general-functions.php:2329
 msgid "Archives: %s"
 msgstr ""
 
 #. translators: Taxonomy term archive title. 1: Taxonomy singular name, 2:
 #. Current taxonomy term
-#: includes/general-functions.php:2308
+#: includes/general-functions.php:2337
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: includes/general-functions.php:2311
+#: includes/general-functions.php:2340
 msgid "Page Not Found"
 msgstr ""
 
-#: includes/general-functions.php:2490
+#: includes/general-functions.php:2519
 #, fuzzy
 msgid "Select Page"
 msgstr "تراز شکلک را انتخاب کنید."
@@ -13054,67 +13054,67 @@ msgstr "اورتا"
 msgid "http://averta.net"
 msgstr "http://averta.net"
 
-#: includes/general-functions.php:2255
+#: includes/general-functions.php:2284
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: includes/general-functions.php:2262
+#: includes/general-functions.php:2291
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: includes/general-functions.php:2269
+#: includes/general-functions.php:2298
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: includes/general-functions.php:2277
+#: includes/general-functions.php:2306
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: includes/general-functions.php:2279
+#: includes/general-functions.php:2308
 #, fuzzy
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "گالری ها"
 
-#: includes/general-functions.php:2281
+#: includes/general-functions.php:2310
 #, fuzzy
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "تصاویر"
 
-#: includes/general-functions.php:2283
+#: includes/general-functions.php:2312
 #, fuzzy
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "پوستر ویدیو"
 
-#: includes/general-functions.php:2285
+#: includes/general-functions.php:2314
 #, fuzzy
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "متن نقل قول"
 
-#: includes/general-functions.php:2287
+#: includes/general-functions.php:2316
 #, fuzzy
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "پیوند"
 
-#: includes/general-functions.php:2289
+#: includes/general-functions.php:2318
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: includes/general-functions.php:2291
+#: includes/general-functions.php:2320
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: includes/general-functions.php:2293
+#: includes/general-functions.php:2322
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""

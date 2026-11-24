@@ -7,7 +7,7 @@ Tags: phlox, elementor, auxin, averta, fullwidth
 Requires PHP: 7.0
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 2.17.24
+Stable tag: 2.17.26
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -153,6 +153,13 @@ Bugs can be reported in our [support forums](https://docs.phlox.pro).
 
 
 == Changelog ==
+
+= Version 2.17.26 / (25.11.2026) =
+- [Fix]: Fatal error while importing demos
+- [Fix]: Phlox options not showing in the WPForms Elementor widget
+
+= Version 2.17.25 / (18.11.2026) =
+- [Fix]: Fatal error on plugin hooks when the Phlox theme framework is not loaded (e.g. WP-CLI or Plesk updates)
 
 = Version 2.17.24 / (07.10.2026) =
 - [Fix]: Addressed a low-severity security vulnerability (CVE-2026-57737)
